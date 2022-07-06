@@ -1,0 +1,36 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.container {
+	@include flex-parent(column, nowrap, flex-start, center);
+	text-align: center;
+	width: 100%;
+
+	h3 {
+		font-size: 22px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 30px;
+		}
+	}
+
+	.posts {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		width: 100%;
+		grid-gap: 20px;
+
+		@include breakpoint-up(mobile) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+		}
+		a {
+			height: 250px;
+			@include breakpoint-up(mobile) {
+				height: 336px;
+			}
+		}
+	}
+}

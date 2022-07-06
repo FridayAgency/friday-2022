@@ -1,0 +1,20 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.title {
+	font-size: 24px;
+	margin: 10px 0 32px 0;
+
+	@include breakpoint-up(mobile) {
+		font-size: 46px;
+		margin: 40px 0 61px 0;
+	}
+}
+
+.posts {
+	width: 100%;
+	div:last-child {
+		border-bottom: none;
+	}
+}

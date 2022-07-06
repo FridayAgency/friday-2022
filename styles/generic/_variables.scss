@@ -1,0 +1,120 @@
+/**
+ * 1. Typography
+ */
+
+// Fallback stack
+$fallback-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,
+	"Lucida Grande", sans-serif;
+
+$fallback-stack-serif: "Georgia", serif;
+
+$font-size-base: 20px;
+$font-weight-base: 300;
+$line-height-base: 1.5;
+
+$ff-sans-serif: "proxima-nova", $fallback-stack;
+$ff-serif: Georgia, "Times New Roman", Times, serif;
+
+$t-duration: 0.25s;
+
+$container-max-width: 1280px;
+$container-gutter: 50px;
+
+/**
+ * 2. Colours
+ */
+// Colour Palette
+$white: #ffffff;
+$black: #000000;
+
+// Primary
+// $primary-brand-1: #fc1e42;
+$primary-brand-1: #e90038;
+$primary-brand-2: #e10f32;
+$dark-red2: #ca0f2e;
+
+// Greys
+$grey-1: #f0f0f0;
+$grey-2: #cacaca;
+$grey-3: #a9a9a9;
+$grey-4: #626262;
+$grey-5: #4a4a4a;
+
+// Text Colours
+$color-text-1: #353c40;
+
+// Error
+$error: #e51313;
+
+// Background Colours
+$base-background-color: #ffffff;
+
+// Font Colours
+$base-font-color: $color-text-1;
+
+// Anchor Colours
+$base-link-color: $primary-brand-1;
+$hover-link-color: darken($primary-brand-1, 15);
+
+//Social Media Colours
+$twitter: #00aced;
+$facebook: #3b5998;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$vimeo: #aad450;
+$lastfm: #d51007;
+
+$responsive-ios: 812px;
+
+$breakpoints: (
+	mobile-small: 374px,
+	mobile-medium: 575px,
+	mobile: 767px,
+	admin-bar: 782px,
+	tablet: 1023px,
+	small-desktop: 1199px,
+	large-desktop: 1399px,
+);
+
+.primary-background {
+	background-color: $primary-brand-1;
+	color: $white;
+}
+
+.secondary-background {
+	background-color: $primary-brand-2;
+	color: $white;
+}
+
+$text-arrow-space: 16px;
+$initial-shaft-width: 18px;
+$expanded-shaft-width: 40px;
+$shaft-thickness: 1px;
+$arrow-head-width: 12px;
+$arrow-head-thickness: $shaft-thickness;
+
+$base-font-size: 62.5%; // Sets up the Base 10 stuff
+$h1-font-size: 60;
+$h2-font-size: 40;
+$h3-font-size: 30;
+$h4-font-size: 26;
+$h5-font-size: 22;
+$h6-font-size: 18;
+$body-font-size: 16;
+$body-font-size-small: 14;
+//tablet heading sizes
+$h3-font-size-tablet: 22;
+//mobile heading sizes
+$h1-font-size-mobile: 40;
+$h2-font-size-mobile: 24;
+$h4-font-size-mobile: 20;
+//blog font sizes
+$blog-heading-font-size: 24;
+
+/*  Line Heights
+  ========================================================================== */
+
+$base-line-height: 1.5;
+$header-line-height: 1.4;

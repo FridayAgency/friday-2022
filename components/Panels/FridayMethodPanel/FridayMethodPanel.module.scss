@@ -1,0 +1,70 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.container {
+	width: 100%;
+	.header {
+		text-align: center;
+
+		max-width: 768px;
+		padding: 0 0 30px 0;
+		margin: 0 auto;
+
+		@include breakpoint-up(mobile) {
+			padding: 0 15px 60px 15px;
+		}
+
+		p {
+			padding: 0 5%;
+			@include breakpoint-up(mobile) {
+				padding: 0 15%;
+			}
+		}
+
+		h2 {
+			font-size: 24px;
+			@include breakpoint-up(mobile) {
+				font-size: 40px;
+			}
+		}
+	}
+
+	&-animation {
+		min-height: 400px;
+		margin: auto;
+		margin: 0 auto;
+		text-align: center;
+		padding: 0 5%;
+		transform: translate3d(0, 0, 0);
+		overflow: visible;
+		max-width: 381px;
+		@include breakpoint-up(mobile) {
+			width: 50%;
+			float: left;
+			height: auto;
+			padding: 0;
+		}
+	}
+
+	&-slider {
+		position: relative;
+		padding: 0 5%;
+		width: 100%;
+		float: none;
+		padding-top: 0px;
+
+		@include breakpoint-up(mobile) {
+			width: 50%;
+			float: right;
+			padding-top: 80px;
+		}
+
+		h3 {
+			font-size: 22px;
+			@include breakpoint-up(mobile) {
+				font-size: 30px;
+			}
+		}
+	}
+}

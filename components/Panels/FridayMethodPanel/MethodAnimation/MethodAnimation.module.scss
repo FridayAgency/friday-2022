@@ -1,0 +1,89 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.animation {
+	position: relative;
+	// max-width: 400px;
+
+	width: 100%;
+	float: none;
+	// height: 55vh;
+	min-height: 400px;
+
+	svg {
+		transform: translate3d(0, 0, 0);
+	}
+
+	.circles_svg,
+	.circles_svg_black,
+	.blob_path,
+	.rollover_circles {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		margin: 0 auto;
+
+		transform: translate3d(0, 0, 0);
+		overflow: visible;
+
+		width: 100%;
+		height: auto;
+
+		// @include breakpoint-up(mobile) {
+		// 	width: 381px;
+		// }
+	}
+
+	.rollover_circles {
+		.circle {
+			opacity: 0;
+
+			&.large {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.blob_path {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.circles_svg {
+		.circle {
+			fill: $primary-brand-1; // transition: all 1s;
+
+			&.small {
+				fill: $primary-brand-1;
+			}
+
+			&.moving {
+				fill: $primary-brand-1; //fill: yellow;
+			}
+
+			&.black {
+				fill: $black;
+			}
+		}
+	}
+
+	.copy {
+		pointer-events: none;
+		fill: white;
+		//@extend .proxima-bold;
+		//setting type manually to override typekit loading transition issues
+		font-family: "proxima-nova", $fallback-stack;
+		font-weight: 700;
+		font-style: normal;
+
+		&.large {
+			font-size: 19px;
+		}
+
+		&.small {
+			font-size: 12px;
+		}
+	}
+}

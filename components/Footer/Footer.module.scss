@@ -1,0 +1,259 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.footer {
+	background-color: $primary-brand-1;
+	color: $white;
+	@extend .proxima-bold;
+
+	padding: 40px 20px 20px 20px;
+
+	@include breakpoint-up(mobile) {
+		padding: 20px;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	.contact {
+		@include flex-parent(column, nowrap, center, center);
+		padding: 16px 0;
+
+		a {
+			padding: 16px 0;
+			text-decoration: none;
+		}
+
+		@include breakpoint-up(mobile) {
+			@include flex-parent(row, nowrap, space-between, center);
+
+			a {
+				padding: 16px;
+			}
+		}
+	}
+	&__upper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 48px 100px 60px 55px;
+		width: 100%;
+
+		@include breakpoint-up(mobile) {
+			grid-template-columns: 10% 30% 30% 30%;
+			grid-template-rows: 1fr 1fr;
+		}
+
+		@include breakpoint-up(tablet) {
+			grid-template-columns: 10% 20% 15% 30% 15% 10%;
+			grid-template-rows: 1fr;
+		}
+
+		.logo {
+			grid-row-start: 1;
+			grid-row-end: 2;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			height: 48px;
+			width: 48px;
+
+			@include breakpoint-up(mobile) {
+				height: 68px;
+				width: 68px;
+				margin-top: 10px;
+			}
+
+			@include breakpoint-up(tablet) {
+				margin-top: 0;
+			}
+		}
+
+		.social {
+			grid-row-start: 1;
+			grid-row-end: 2;
+			grid-column-start: 3;
+			grid-column-end: 5;
+			margin: 0;
+			@include flex-parent(row, nowrap, space-between, center);
+
+			@include breakpoint-up(mobile) {
+				grid-column-start: 4;
+				grid-column-end: 5;
+			}
+
+			@include breakpoint-up(tablet) {
+				grid-column-start: 5;
+				grid-column-end: 6;
+			}
+			li {
+				height: 20px;
+				width: 28px;
+
+				a {
+					display: block;
+					height: 100%;
+					width: 100%;
+					position: relative;
+				}
+			}
+		}
+
+		.address {
+			@extend .proxima-regular;
+			text-align: center;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			grid-column-start: 1;
+			grid-column-end: 5;
+			padding-top: 30px;
+
+			@include breakpoint-up(mobile) {
+				text-align: left;
+
+				grid-row-start: 1;
+				grid-row-end: 2;
+				grid-column-start: 2;
+				grid-column-end: 3;
+				margin-left: 20px;
+			}
+
+			@include breakpoint-up(tablet) {
+				padding-top: 20px;
+			}
+		}
+
+		.contact {
+			grid-row-start: 3;
+			grid-row-end: 4;
+			grid-column-start: 1;
+			grid-column-end: 5;
+			@include flex-parent(row, nowrap, space-between, flex-end);
+			padding: 0 40px;
+
+			@include breakpoint-up(mobile) {
+				grid-row-start: 2;
+				grid-row-end: 3;
+				grid-column-start: 2;
+				grid-column-end: 4;
+				@include flex-parent(row, nowrap, flex-start, flex-end);
+				padding: 0;
+			}
+
+			@include breakpoint-up(tablet) {
+				grid-row-start: 1;
+				grid-row-end: 2;
+				grid-column-start: 4;
+				grid-column-end: 5;
+				@include flex-parent(row-reverse, nowrap, flex-end, center);
+			}
+		}
+
+		.google {
+			grid-row-start: 4;
+			grid-row-end: 5;
+			grid-column-start: 1;
+			grid-column-end: 5;
+
+			margin-top: 10px;
+			a {
+				height: 45px;
+				width: 100%;
+				position: relative;
+				display: block;
+			}
+
+			@include breakpoint-up(mobile) {
+				grid-row-start: 2;
+				grid-row-end: 3;
+				grid-column-start: 4;
+				grid-column-end: 5;
+
+				margin-left: auto;
+				margin-top: 20px;
+				a {
+					height: 45px;
+					width: 52px;
+				}
+			}
+			@include breakpoint-up(tablet) {
+				grid-row-start: 1;
+				grid-row-end: 2;
+				grid-column-start: 6;
+				grid-column-end: 7;
+				a {
+					height: 70px;
+					width: 82px;
+				}
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__upper,
+	&__lower {
+		max-width: $container-max-width;
+		margin: auto;
+		width: 100%;
+	}
+
+	&__lower {
+		.navigation {
+			@include flex-parent(row, nowrap, space-between, center);
+			margin: 10px 0;
+			width: 100%;
+
+			li {
+				padding: 16px 0;
+				font-size: 14px;
+				// width: 100%;
+				span {
+					padding: 0 4px;
+				}
+				a {
+					text-decoration: none;
+				}
+
+				@include breakpoint-up(mobile) {
+					padding: 0;
+				}
+			}
+
+			@include breakpoint-up(mobile) {
+				@include flex-parent(row, nowrap, space-between, flex-end);
+
+				.google {
+					margin-right: 20px;
+					position: relative;
+				}
+			}
+		}
+
+		.social {
+			margin: 16px 0 60px 0;
+
+			li {
+				height: 20px;
+				width: 20px;
+				position: relative;
+				display: inline-block;
+				padding: 0 24px;
+				a {
+					position: relative;
+					height: 20px;
+					width: 20px;
+					display: block;
+				}
+			}
+
+			@include breakpoint-up(mobile) {
+				margin: 16px 0 16px 0;
+			}
+		}
+
+		@include breakpoint-up(mobile) {
+			@include flex-parent(row, nowrap, space-between, center);
+			margin-top: 20px;
+		}
+	}
+}

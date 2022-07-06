@@ -1,0 +1,152 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.container {
+	width: 100%;
+	max-width: 1280px;
+	padding: 0 0 10% 0;
+	margin: 0 auto;
+	// height: 100%;
+	@include breakpoint-up(tablet) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 50px 5%;
+		grid-template-rows: 1;
+	}
+
+	&.gap {
+		@include breakpoint-up(tablet) {
+			grid-gap: 8%;
+		}
+	}
+
+	&.both {
+		padding: 40px 0;
+	}
+
+	&.none {
+		padding: 0;
+	}
+
+	&.top-only {
+		padding: 40px 0 0 0;
+	}
+
+	&.bottom-only {
+		padding: 0 0 40px 0;
+	}
+
+	&.left {
+		@include breakpoint-up(tablet) {
+			.image {
+				grid-column: 1;
+				grid-row: 1;
+			}
+			.content {
+				grid-column: 2;
+				grid-row: 1;
+			}
+		}
+	}
+	&.right {
+		@include breakpoint-up(tablet) {
+			.image {
+				grid-column: 2;
+				grid-row: 1;
+			}
+			.content {
+				grid-column: 1;
+				grid-row: 1;
+			}
+		}
+	}
+
+	.image {
+		position: relative;
+		height: 168px;
+		width: 100%;
+
+		@include breakpoint-up(mobile) {
+			height: 360px;
+		}
+		@include breakpoint-up(tablet) {
+			max-height: 560px;
+			height: auto;
+		}
+	}
+
+	.content {
+		padding: 20px 0 60px 0;
+		// max-width: 420px;
+
+		@include breakpoint-up(tablet) {
+			// flex-basis: 50%;
+			@include flex-parent(column, wrap, center, flex-start);
+			padding: 0 0 57px 0;
+			margin-bottom: 57px;
+		}
+
+		&.padding {
+			@include breakpoint-up(tablet) {
+				padding: 0 75px;
+			}
+		}
+
+		h3 {
+			&.small {
+				font-size: 20px;
+				@include breakpoint-up(mobile) {
+					font-size: 26px;
+				}
+			}
+
+			&.large {
+				font-size: 24px;
+				@include breakpoint-up(tablet) {
+					font-size: 40px;
+				}
+			}
+
+			font-size: 20px;
+			margin-bottom: 24px;
+
+			&.red {
+				color: $primary-brand-1;
+			}
+
+			&.black {
+				color: $black;
+			}
+
+			@include breakpoint-up(tablet) {
+				line-height: 130%;
+				margin-top: 57px;
+				margin-bottom: 14px;
+			}
+		}
+
+		p {
+			font-size: 16px;
+			@include breakpoint-up(tablet) {
+				font-size: 16px;
+				line-height: 140%;
+			}
+		}
+
+		.subtitle {
+			font-size: 14px;
+			@extend .proxima-bold;
+			@include breakpoint-up(tablet) {
+				font-size: 20px;
+				line-height: 130%;
+				margin-bottom: 35px;
+			}
+		}
+	}
+
+	ul {
+		@include flex-parent(row, wrap, flex-start, center);
+		list-style: none;
+	}
+}

@@ -1,0 +1,58 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.post-next-prev {
+	@include breakpoint-up(mobile) {
+		@include flex-parent(row, nowrap, space-evenly, center);
+	}
+
+	.prev,
+	.next {
+		position: relative;
+		height: 355px;
+		color: $white;
+		cursor: pointer;
+		display: block;
+		@include breakpoint-up(mobile) {
+			flex-basis: 50%;
+		}
+
+		.image {
+			height: 100%;
+			position: relative;
+			z-index: -1;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.5);
+			transition: all 0.3s ease-in-out;
+
+			@include flex-parent(column, nowrap, center, center);
+
+			.subtitle {
+				margin-bottom: 24px;
+			}
+
+			.title {
+				@extend .proxima-bold;
+				font-size: 22px;
+				text-align: center;
+				padding: 0 24px;
+
+				@include breakpoint-up(mobile) {
+					font-size: 32px;
+				}
+			}
+
+			&:hover {
+				background: rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+}

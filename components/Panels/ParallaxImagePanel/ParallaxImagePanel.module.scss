@@ -1,0 +1,39 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.container {
+	display: none;
+	position: relative;
+	z-index: 8;
+	// width: 100%;
+	// max-width: 800px;
+
+	height: 0px;
+	@include breakpoint-up(tablet) {
+		display: block;
+	}
+
+	.image {
+		position: absolute;
+		max-width: 800px;
+		// transform: translateX(-40%);
+		height: 200px;
+		width: 200px;
+		@include breakpoint-up(tablet) {
+			display: block;
+		}
+	}
+}
+.left {
+	.image {
+		left: 0;
+	}
+}
+
+.right {
+	.image {
+		right: 0px;
+		// transform: translateX(40%);
+	}
+}

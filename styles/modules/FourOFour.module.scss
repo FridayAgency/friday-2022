@@ -1,0 +1,43 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.content {
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	left: 0;
+	top: 0;
+	height: 500px;
+	color: $white;
+	@include flex-parent(column, nowrap, center, center);
+
+	@include breakpoint-up(mobile) {
+		height: 690px;
+	}
+
+	h1 {
+		font-size: 40px;
+
+		margin-bottom: 0;
+		@include breakpoint-up(mobile) {
+			font-size: 60px;
+		}
+	}
+	p {
+		margin: 8px 0 40px;
+	}
+}
+
+.image {
+	position: absolute;
+	bottom: 0;
+	left: 2%;
+	height: 200px;
+	width: 200px;
+
+	@include breakpoint-up(mobile) {
+		height: 300px;
+		width: 300px;
+	}
+}

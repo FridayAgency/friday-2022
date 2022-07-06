@@ -1,0 +1,86 @@
+@import "/styles/generic/variables";
+@import "/styles/generic/mixins";
+
+.section {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&.base {
+		background-color: inherit;
+	}
+	&.primary {
+		background-color: $primary-brand-1;
+		color: $white;
+	}
+
+	&.secondary {
+		background-color: $primary-brand-2;
+		color: $white;
+	}
+
+	&.grey {
+		background-color: $grey-1;
+	}
+
+	&.black {
+		background-color: $black;
+		color: $white;
+	}
+
+	&.both {
+		padding: 30px 0;
+
+		@include breakpoint-up(mobile) {
+			padding: 80px 0;
+		}
+	}
+
+	&.none {
+		padding: 0 0;
+	}
+
+	&.top-only {
+		padding: 30px 0 0 0;
+
+		@include breakpoint-up(mobile) {
+			padding: 80px 0 0 0;
+		}
+	}
+
+	&.bottom-only {
+		padding: 0 0 30px 0;
+
+		@include breakpoint-up(mobile) {
+			padding: 0 0 80px 0;
+		}
+	}
+
+	.container {
+		width: 100%;
+		max-width: $container-max-width;
+		margin: auto;
+		margin-top: 0;
+		padding: 0 5%;
+		&.fullWidth {
+			max-width: 100%;
+			padding: 0;
+		}
+
+		@include flex-parent(column, nowrap, center, flex-start);
+
+		&.left {
+			align-items: center;
+			text-align: left;
+		}
+
+		&.centre {
+			align-items: center;
+			text-align: center;
+		}
+
+		&.right {
+			align-items: flex-end;
+		}
+	}
+}

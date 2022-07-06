@@ -1,0 +1,28 @@
+@import "/styles/generic/variables";
+
+.wavy {
+	.trigger {
+		position: absolute;
+		top: -120px;
+	}
+	&-line {
+		position: absolute;
+		bottom: -21px;
+		height: 120px;
+		width: 100%;
+		overflow: hidden;
+		svg {
+			position: absolute;
+			left: -5%;
+			bottom: 20px;
+			width: 110%;
+			fill: $white;
+			path {
+				fill: $white;
+			}
+			.path-two {
+				display: none;
+			}
+		}
+	}
+}

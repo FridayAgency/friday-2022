@@ -1,0 +1,14 @@
+.gallary {
+	&__slider {
+		.slick-list {
+			overflow: hidden;
+		}
+
+		.slick-slide > div {
+			padding: 0 5px;
+			@include breakpoint-up(mobile) {
+				padding: 0 40px;
+			}
+		}
+	}
+}

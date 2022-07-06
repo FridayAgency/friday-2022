@@ -1,0 +1,81 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.awards {
+	list-style: none;
+	width: 100%;
+	@include flex-parent(row, wrap, flex-start, flex-start);
+	max-width: 840px;
+	margin: auto;
+
+	.award {
+		width: 50%;
+		margin-bottom: 40px;
+
+		@include breakpoint-up(mobile) {
+			width: 25%;
+			padding: 0 30px;
+		}
+
+		&:nth-child(odd) {
+			padding-right: 17px;
+			@include breakpoint-up(mobile) {
+				padding-right: 30px;
+			}
+		}
+
+		&:nth-child(even) {
+			padding-left: 17px;
+			@include breakpoint-up(mobile) {
+				padding-left: 30px;
+			}
+		}
+
+		&:nth-child(3) {
+			.logo {
+				width: 80px;
+				margin: auto;
+			}
+		}
+
+		&:nth-child(4) {
+			.logo {
+				width: 90px;
+				margin: auto;
+			}
+		}
+
+		.logo {
+			padding-bottom: 20px;
+			position: relative;
+			height: 90px;
+			@include flex-parent(row, nowrap, center, center);
+			max-width: 140px;
+		}
+		.title {
+			padding: 35px 10px 0 10px;
+			text-align: center;
+			font-weight: 400;
+			position: relative;
+			max-width: 140px;
+			&:after {
+				content: "";
+				width: 100%;
+				background-color: $primary-brand-1;
+				height: 1px;
+				position: absolute;
+				top: 20px;
+				right: 0;
+				left: 0;
+			}
+			@include breakpoint-up(mobile) {
+				padding-bottom: 20px;
+				// min-height: 110px;
+			}
+			@include breakpoint-up(mobile) {
+				padding: 35px 0 0 0;
+			}
+		}
+	}
+}

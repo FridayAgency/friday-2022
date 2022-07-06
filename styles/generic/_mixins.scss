@@ -1,0 +1,59 @@
+@import "./functions";
+
+@mixin breakpoint-up($name, $breakpoints: $breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+
+	@media (min-width: $min) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($name, $breakpoints: $breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $max == 767px {
+		@media (max-width: $max), screen and (max-width: $responsive-ios) and (orientation: landscape) {
+			@content;
+		}
+	} @else {
+		@media (max-width: $max) {
+			@content;
+		}
+	}
+}
+
+@mixin text-style($size: 16px, $height: 24px, $color: $color-text-1) {
+	font-size: $size;
+	line-height: $height;
+	color: $color;
+}
+
+/**
+ * Wrappers / Grids
+ */
+
+@mixin wrapper--1280 {
+	width: auto;
+	max-width: 1280px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 0;
+	padding-left: 0;
+	float: none;
+}
+
+/**
+ * Flex
+ */
+
+@mixin flex-parent($direction: column, $wrap: wrap, $justify: space-between, $align: center) {
+	display: flex;
+	flex-wrap: $wrap;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+	font-size: ($sizeValue) + px;
+}

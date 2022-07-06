@@ -1,0 +1,15 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.link {
+	color: $primary-brand-1;
+	text-decoration: none;
+	@extend .proxima-bold;
+	font-size: 24px;
+	padding-bottom: 60px;
+	@include breakpoint-up(mobile) {
+		margin-bottom: 50px;
+		font-size: 40px;
+	}
+}

@@ -1,0 +1,20 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+$text-arrow-space: 16px;
+$initial-shaft-width: 18px;
+$expanded-shaft-width: 40px;
+$shaft-thickness: 1px;
+$arrow-head-width: 12px;
+$arrow-head-thickness: $shaft-thickness;
+
+.nav {
+	bottom: 0px;
+	left: 0px;
+	right: auto;
+	position: relative;
+	margin: 0;
+	@include flex-parent(row, nowrap, space-between, center);
+	max-width: 130px;
+}

@@ -1,0 +1,147 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.header {
+	position: relative;
+	width: 100vw;
+	height: 550px;
+	background-color: $primary-brand-1;
+	color: $white;
+	@include flex-parent(row, nowrap, center, center);
+	overflow: hidden;
+	margin-bottom: 50px;
+
+	@include breakpoint-up(mobile) {
+		height: 900px;
+		margin-bottom: 0;
+	}
+	@include breakpoint-up(small-desktop) {
+		height: 100vh;
+		min-height: 700px;
+	}
+	p {
+		font-size: 20px;
+		@include breakpoint-up(mobile) {
+			font-size: 40px;
+		}
+	}
+
+	.bold {
+		@extend .proxima-bold;
+		display: inline-block;
+		opacity: 0;
+	}
+
+	.animation {
+		padding: 0 20px;
+		margin-top: 100px;
+		width: 355px;
+		@include breakpoint-up(mobile) {
+			height: 600px;
+			width: 640px;
+			margin-top: 0;
+			padding: 0;
+		}
+		@include breakpoint-up(small-desktop) {
+			height: 432px;
+			width: 855px;
+			margin-top: 0;
+			padding: 0;
+		}
+
+		.fade {
+			opacity: 0;
+		}
+	}
+
+	.plus {
+		display: inline-block;
+
+		padding-left: 40px;
+		opacity: 0;
+		width: 28px;
+		height: 28px;
+
+		@include breakpoint-up(mobile) {
+			width: 34px;
+			height: 34px;
+		}
+		.line {
+			background: $white;
+			display: block;
+			width: 34px;
+			height: 2px;
+
+			@include breakpoint-up(mobile) {
+				width: 34px;
+				height: 3px;
+			}
+
+			&:first-child {
+				transform: rotate(90deg) translateX(22px);
+			}
+			&:last-child {
+				transform: translateY(20px);
+				@include breakpoint-up(mobile) {
+					transform: translateY(19px);
+				}
+			}
+		}
+	}
+
+	.equals {
+		display: inline-block;
+		width: 28px;
+		height: 28px;
+
+		@include breakpoint-up(mobile) {
+			width: 34px;
+			height: 34px;
+		}
+		padding-right: 40px;
+		opacity: 0;
+		.line {
+			width: 28px;
+			height: 2px;
+
+			@include breakpoint-up(mobile) {
+				width: 32px;
+				height: 3px;
+			}
+			background: $white;
+			display: block;
+
+			&:first-child {
+				transform: translateY(12px);
+			}
+			&:last-child {
+				transform: translateY(22px);
+			}
+		}
+	}
+
+	.arrow {
+		position: absolute;
+		bottom: 40px;
+		right: 50%;
+		width: 24px;
+		height: 12px;
+		transform: translateX(50%);
+		background-image: url("/images/icon--arrow--white.svg");
+		background-size: 24px 12px;
+		content: "";
+		cursor: pointer;
+		transition: 0.3s;
+		z-index: 2;
+		opacity: 1;
+		@include breakpoint-up(mobile) {
+			bottom: 60px;
+		}
+
+		@include breakpoint-up(tablet) {
+			bottom: 7.5%;
+			transform: scale(1.5);
+		}
+	}
+}

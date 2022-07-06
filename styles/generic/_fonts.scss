@@ -1,0 +1,64 @@
+/*  proxima nova regular
+  ========================================================================== */
+.proxima-regular {
+	font-family: "proxima-nova", $fallback-stack;
+	font-weight: 400;
+	font-style: normal;
+	transition: 0.3s;
+}
+
+/*  proxima nova bold
+  ========================================================================== */
+
+.proxima-bold {
+	font-family: "proxima-nova", $fallback-stack;
+	font-weight: 700;
+	font-style: normal;
+	transition: 0.3s;
+}
+
+/* Merriweather Regular
+========================================================================== */
+@font-face {
+	font-family: "merriweather_regular";
+	src: local("merriweather_regular"), local("merriweather_regular"),
+		url("/fonts/merriweather/merriweather-v19-latin-regular.woff2") format("woff2"),
+		url("/fonts/merriweather/merriweather-v19-latin-regular.woff") format("woff");
+	font-display: swap;
+}
+
+.merriweather-regular {
+	font-family: "merriweather_regular", $fallback-stack-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Merriweather Italic
+========================================================================== */
+@font-face {
+	font-family: "merriweather_italic";
+	src: local("merriweather_italic"), local("merriweather_italic"),
+		url("/fonts/merriweather/merriweather-v19-latin-italic.woff2") format("woff2"),
+		url("/fonts/merriweather/merriweather-v19-latin-italic.woff") format("woff");
+	font-display: swap;
+}
+.merriweather-italic {
+	font-family: "merriweather_italic", $fallback-stack-serif;
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Merriweather Bold
+========================================================================== */
+@font-face {
+	font-family: "merriweather_bold";
+	src: local("merriweather_bold"), local("merriweather_bold"),
+		url("/fonts/merriweather/merriweather-v19-latin-700.woff2") format("woff2"),
+		url("/fonts/merriweather/merriweather-v19-latin-700.woff") format("woff");
+	font-display: swap;
+}
+.merriweather-bold {
+	font-family: "merriweather_bold", $fallback-stack-serif;
+	font-style: normal;
+	font-weight: normal;
+}

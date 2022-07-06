@@ -1,0 +1,70 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.small {
+	h2 {
+		font-size: 22px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 30px;
+		}
+	}
+	p {
+		font-size: 16px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 16px;
+		}
+	}
+}
+
+.large {
+	h2 {
+		font-size: 40px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 48px;
+		}
+	}
+	p {
+		font-size: 16px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 20px;
+		}
+	}
+}
+
+.content {
+	max-width: 768px;
+
+	&.small {
+		max-width: 640px;
+	}
+
+	&.centre {
+		text-align: center;
+	}
+
+	h2 {
+		&.black {
+			color: $black;
+		}
+
+		&.red {
+			color: $primary-brand-1;
+		}
+	}
+
+	ul,
+	ol {
+		padding-inline-start: 40px;
+		li {
+			font-size: 16px;
+		}
+	}
+	strong {
+		font-weight: 700;
+	}
+}

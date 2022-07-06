@@ -1,0 +1,30 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.text {
+	@extend .proxima-bold;
+
+	&.small {
+		font-size: 22px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 30px;
+			padding: 0 100px;
+		}
+	}
+	&.large {
+		font-size: 22px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 40px;
+			padding: 0 100px;
+		}
+	}
+	&.centre {
+		text-align: center;
+	}
+	&.left {
+		text-align: left;
+	}
+}

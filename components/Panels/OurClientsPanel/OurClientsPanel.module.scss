@@ -1,0 +1,27 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.title {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 24px;
+
+	@include breakpoint-up(mobile) {
+		margin-bottom: 50px;
+		font-size: 40px;
+	}
+}
+.clients {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: 150px;
+	align-items: center;
+	justify-items: center;
+	@include breakpoint-up(mobile) {
+		grid-template-columns: repeat(5, 1fr);
+		grid-auto-rows: 150px;
+	}
+}

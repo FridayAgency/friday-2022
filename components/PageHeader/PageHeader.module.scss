@@ -1,0 +1,8 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+
+.header{
+    height:50vh;
+    width: 100%;
+    background: $primary-brand-1;
+}

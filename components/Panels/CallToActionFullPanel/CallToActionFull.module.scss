@@ -1,0 +1,35 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.cta {
+	position: relative;
+	min-height: 390px;
+	text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: #fff;
+	position: relative;
+
+	@include breakpoint-up(mobile) {
+		min-height: 430px;
+	}
+	.content {
+		@include flex-parent(column, nowrap, center, center);
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.15);
+	}
+
+	h2 {
+		font-size: 24px;
+
+		@include breakpoint-up(mobile) {
+			font-size: 40px;
+		}
+	}
+}

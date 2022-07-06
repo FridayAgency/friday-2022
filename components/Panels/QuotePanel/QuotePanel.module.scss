@@ -1,0 +1,28 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.container {
+	max-width: 768px;
+	margin: auto;
+	padding: 30px 0;
+
+	@include breakpoint-up(mobile) {
+		padding: 80px 0;
+	}
+
+	.quote {
+		@extend .merriweather-italic;
+		font-size: 22px;
+		line-height: 34px;
+		font-style: italic;
+		font-weight: 600;
+		@include breakpoint-up(mobile) {
+			font-size: 28px;
+			line-height: 40px;
+		}
+	}
+	.author {
+		color: $grey-5;
+	}
+}

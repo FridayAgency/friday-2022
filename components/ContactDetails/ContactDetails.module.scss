@@ -1,0 +1,63 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.wrapper {
+	@include flex-parent(column, nowrap, space-between, center);
+	padding-top: 40px;
+
+	@include breakpoint-up(mobile) {
+		@include flex-parent(column, nowrap, space-between, flex-start);
+		padding-top: 0;
+	}
+	.phone {
+		color: $primary-brand-1;
+		font-size: 26px;
+		margin: 24px;
+		@extend .proxima-bold;
+		@include breakpoint-up(mobile) {
+			margin: 0 0 24px 0;
+		}
+	}
+	.email {
+		color: $primary-brand-1;
+		font-size: 26px;
+		margin: 0 0 24px 0;
+		@extend .proxima-bold;
+	}
+	.address {
+		text-align: center;
+		font-size: 16px;
+
+		@include breakpoint-up(mobile) {
+			text-align: left;
+		}
+	}
+	.map {
+		color: $primary-brand-1;
+		font-size: 16px;
+		text-decoration: underline;
+	}
+	ul {
+		list-style: none;
+		@include flex-parent(row, nowrap, space-evenly, center);
+		width: 100%;
+		margin-top: 60px;
+
+		@include breakpoint-up(mobile) {
+			width: 40%;
+			@include flex-parent(row, nowrap, space-between, center);
+		}
+		li {
+			position: relative;
+			height: 18px;
+			width: 18px;
+			a {
+				position: relative;
+				height: 18px;
+				width: 18px;
+				display: block;
+			}
+		}
+	}
+}

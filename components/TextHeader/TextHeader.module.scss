@@ -1,0 +1,27 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "/styles/generic/mixins";
+
+.header-section {
+	position: relative;
+	height: 275px;
+	@include breakpoint-up(mobile) {
+		height: 390px;
+	}
+}
+
+.title {
+	text-align: center;
+	min-height: 255px;
+	height: 275px;
+	@include flex-parent(row, nowrap, center, center);
+	padding-top: 30px;
+
+	@include breakpoint-up(mobile) {
+		padding-top: 100px;
+	}
+
+	&.padding {
+		padding-top: 220px;
+	}
+}

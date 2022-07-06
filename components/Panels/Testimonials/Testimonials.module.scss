@@ -1,0 +1,135 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.testimonials {
+	position: relative;
+	padding-bottom: 40px;
+	&::before {
+		content: "";
+		background: url("/images/quotes.png") no-repeat center / cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 40px;
+		width: 40px;
+
+		@include breakpoint-up(mobile) {
+			height: 90px;
+			width: 97px;
+		}
+	}
+}
+
+.container {
+	width: 100%;
+
+	@include breakpoint-up(mobile) {
+		display: grid;
+		grid-template-columns: 40% 60%;
+	}
+
+	.title {
+		padding: 32px 55px 22px 55px;
+		font-size: 22px;
+		line-height: 120%;
+
+		@include breakpoint-up(mobile) {
+			font-size: 40px;
+			padding: 55px;
+		}
+	}
+
+	.copy {
+		padding: 0 55px;
+
+		p {
+			font-size: 14px;
+			@extend .proxima-bold;
+
+			@include breakpoint-up(mobile) {
+				font-size: 20px;
+				line-height: 130%;
+			}
+		}
+
+		@include breakpoint-up(mobile) {
+			padding: 55px 55px 0 55px;
+		}
+	}
+
+	.author {
+		&__wrapper {
+			@include breakpoint-up(mobile) {
+				@include flex-parent(row, nowrap, flex-start, flex-start);
+			}
+		}
+
+		font-size: 12px;
+		@extend .proxima-bold;
+		text-transform: uppercase;
+		margin: 24px 0 0 0;
+		padding: 0 55px;
+		margin-bottom: 0;
+		position: relative;
+
+		font-size: 14px;
+
+		@include breakpoint-up(mobile) {
+			margin: 0 0 55px 55px;
+			padding: 0 24px 0 55px;
+			font-size: 16px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 11px;
+				top: 10%;
+				height: 80%;
+				width: 1px;
+				background-color: $primary-brand-1;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: calc((55px - 22px) / 2);
+			top: calc(50% - 1px);
+			height: 2px;
+			width: 24px;
+			background-color: $primary-brand-1;
+			@include breakpoint-up(mobile) {
+				width: 32px;
+				left: 0;
+			}
+		}
+	}
+
+	.position {
+		font-size: 12px;
+		margin-left: 55px;
+
+		@include breakpoint-up(mobile) {
+			margin-left: 0;
+			font-size: 16px;
+		}
+	}
+
+	.slider {
+		position: relative;
+	}
+
+	.right,
+	.left {
+		position: absolute;
+		top: calc(45% - 20px);
+	}
+
+	.right {
+		left: -8px;
+	}
+	.left {
+		right: -8px;
+	}
+}

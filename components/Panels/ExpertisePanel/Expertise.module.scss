@@ -1,0 +1,242 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.expertise {
+	margin-top: calc(50px - 1.5em);
+	@include breakpoint-up(mobile) {
+		margin-top: 0;
+	}
+	@include breakpoint-up(tablet) {
+		display: flex;
+	}
+
+	&-block {
+		width: 100%;
+		height: 340px;
+		position: relative;
+		transition: all 0.5s ease-in-out;
+		@include breakpoint-up(mobile) {
+			height: 540px;
+		}
+
+		@include breakpoint-up(tablet) {
+			flex: 2;
+		}
+
+		&:hover {
+			@include breakpoint-up(tablet) {
+				flex: 3;
+			}
+
+			.overlay {
+				@include breakpoint-up(tablet) {
+					background: rgba(0, 0, 0, 0.8);
+				}
+
+				.content {
+					.copy,
+					.subtitle {
+						@include breakpoint-up(tablet) {
+							height: auto;
+							opacity: 1;
+							margin-bottom: 20px;
+						}
+					}
+				}
+
+				.expertise-btn {
+					background: $primary-brand-1;
+					@include breakpoint-up(tablet) {
+						animation: button-animation 0.5s normal forwards ease-in-out;
+						// animation-delay: 0.5s;
+					}
+					span {
+						@include breakpoint-up(tablet) {
+							animation: span-animation 0.5s normal forwards ease-in-out;
+							// animation-delay: 0.5s;
+						}
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			.overlay {
+				.content {
+					.title {
+						@include breakpoint-up(mobile) {
+							max-width: 400px;
+						}
+						@include breakpoint-up(tablet) {
+							max-width: 260px;
+						}
+						@include breakpoint-up(small-desktop) {
+							max-width: 350px;
+						}
+						@include breakpoint-up(large-desktop) {
+							max-width: 400px;
+						}
+					}
+				}
+			}
+		}
+
+		.image {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		.overlay {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.6);
+			transition: all 0.5s ease-in-out;
+			color: $white;
+
+			@include breakpoint-up(tablet) {
+				background: rgba(0, 0, 0, 0.4);
+			}
+
+			.content {
+				@include flex-parent(column, nowrap, center, center);
+				height: 100%;
+				padding: 0 12px;
+
+				opacity: 0;
+				transform: translate(0, 80px);
+
+				@include breakpoint-up(tablet) {
+					opacity: 1;
+					transform: translate(0, 0);
+				}
+				.title {
+					font-size: 24px;
+					line-height: 120%;
+
+					@include breakpoint-up(mobile) {
+						font-size: 48px;
+						max-width: 300px;
+						text-align: center;
+					}
+					@include breakpoint-up(tablet) {
+						font-size: 30px;
+						max-width: 200px;
+					}
+					@include breakpoint-up(small-desktop) {
+						font-size: 38px;
+						max-width: 240px;
+					}
+					@include breakpoint-up(large-desktop) {
+						font-size: 44px;
+						max-width: 240px;
+					}
+				}
+
+				.copy,
+				.subtitle {
+					font-size: 16px;
+					line-height: 150%;
+					text-align: center;
+					transition: all 0.25s ease-in-out;
+
+					@include breakpoint-up(mobile) {
+						font-size: 18px;
+						max-width: 400px;
+					}
+
+					@include breakpoint-up(tablet) {
+						height: 0;
+						opacity: 0;
+						margin: 0;
+					}
+				}
+
+				.subtitle {
+					margin-bottom: 40px;
+
+					@include breakpoint-up(tablet) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&-btn {
+		color: $white;
+		background-color: $primary-brand-1;
+		border: 3px solid $primary-brand-1;
+		text-align: center;
+		@include breakpoint-up(tablet) {
+			width: 8px;
+			height: 8px;
+			border: none;
+			padding: 0;
+			border-radius: 50%;
+			// transition: all 0.5s ease-in-out;
+			// animation-delay: 0.5s;
+			// animation: button-animation 0.5s normal forwards ease-in-out;
+			// animation-direction: reverse;
+			span {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.expertise-btn {
+	background: $primary-brand-1;
+}
+
+@keyframes span-animation {
+	80% {
+		opacity: 0;
+	}
+	95% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes button-animation {
+	0% {
+		width: 8px;
+		height: 8px;
+		border: none;
+		padding: 0;
+		border-radius: 50%;
+		background-color: $primary-brand-1;
+	}
+	15% {
+		height: 20px;
+		width: 20px;
+		border-radius: 25px;
+	}
+	25% {
+		height: 40px;
+		width: 40px;
+		border-radius: 50px;
+	}
+	75% {
+		width: 161px;
+	}
+	95% {
+		border: 3px solid $primary-brand-1;
+		padding: 7px 20px 9px 20px;
+	}
+	100% {
+		border-radius: 0;
+		border: 3px solid $primary-brand-1;
+		padding: 7px 20px 9px 20px;
+		height: 40px;
+		width: 180px;
+	}
+}

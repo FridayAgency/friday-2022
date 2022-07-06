@@ -1,0 +1,44 @@
+@import "/styles/generic/variables";
+@import "/styles/generic/mixins";
+
+.container {
+	display: grid;
+	align-items: center;
+	width: 100%;
+	&.default {
+		grid-template-columns: 1fr;
+		@include breakpoint-up(mobile) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	&.thirds_2_1 {
+		grid-template-columns: 1fr;
+		@include breakpoint-up(mobile) {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+	&.thirds_1_2 {
+		grid-template-columns: 1fr;
+		@include breakpoint-up(mobile) {
+			grid-template-columns: 1fr 2fr;
+		}
+	}
+
+	.first,
+	.second {
+		position: relative;
+		width: 100%;
+		min-height: 288px;
+		background-size: cover;
+		background-position: center;
+		@include breakpoint-up(mobile) {
+			min-height: 528px;
+		}
+		&.hide {
+			display: none;
+			@include breakpoint-up(mobile) {
+				display: block;
+			}
+		}
+	}
+}

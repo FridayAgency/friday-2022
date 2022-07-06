@@ -1,0 +1,14 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.image {
+	position: relative;
+	width: 100%;
+	height: 288px;
+
+	@include breakpoint-up(mobile) {
+		min-height: 624px;
+		height: 100%;
+	}
+}

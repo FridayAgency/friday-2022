@@ -1,0 +1,69 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.button {
+	// border: 3px solid $white;
+	@extend .proxima-bold;
+	letter-spacing: 1px;
+	padding: 7px 20px;
+	display: inline-block;
+	// margin-top: 50px;
+	// color: $white;
+	text-decoration: none;
+	//bg transition setup
+	// background-image: linear-gradient(135deg, $white 50%, transparent 51%);
+	background-size: 101px 101px; /* some initial size to get the slanted appearance */
+	background-position: -51px -51px; /* negative positioning to hide it initially */
+	background-repeat: no-repeat;
+	// transition: all ease 0.5s;
+	background-color: transparent;
+	font-size: 16px;
+	line-height: 120%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
+	@include breakpoint-up(mobile) {
+		line-height: 130%;
+	}
+
+	&:hover {
+		background-size: 200px 200px; /* 200% because gradient is colored only for 50% */
+		background-position: 0px 0px; /* bring it fully into view */
+	}
+
+	&.white {
+		border: 3px solid $white;
+		color: $white;
+		background-image: linear-gradient(135deg, $white 50%, transparent 50%);
+		&:hover {
+			color: $primary-brand-1;
+		}
+	}
+
+	&.red {
+		background-image: linear-gradient(135deg, $primary-brand-1 50%, transparent 50%);
+		border: 3px solid $primary-brand-1;
+		color: $primary-brand-1;
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&.solid {
+		background-color: $primary-brand-1;
+
+		@include breakpoint-up(mobile) {
+			padding: 0;
+		}
+	}
+
+	&.black {
+		background-image: linear-gradient(135deg, $black 50%, transparent 50%);
+		border: 3px solid $black;
+		color: $black;
+		&:hover {
+			color: $white;
+		}
+	}
+}

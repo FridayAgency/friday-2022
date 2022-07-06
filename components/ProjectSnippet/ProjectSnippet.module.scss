@@ -1,0 +1,71 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.container {
+	position: relative;
+	height: 305px;
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 12px 20px rgb(0 0 0 / 20%);
+	max-width: 1280px;
+
+	margin: 0 auto;
+
+	@include breakpoint-up(mobile) {
+		height: 430px;
+		padding: 0;
+	}
+
+	@include breakpoint-up(tablet) {
+		height: 528px;
+	}
+
+	.image {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+
+	.content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		padding: 10%;
+		height: 100%;
+		@include flex-parent(column, nowrap, space-between, flex-start);
+
+		@include breakpoint-up(mobile) {
+			padding: 5%;
+			height: 80%;
+		}
+
+		.logo {
+			position: relative;
+			width: 170px;
+
+			height: 60px;
+			align-self: flex-start;
+			img {
+				margin: 0;
+			}
+		}
+
+		.title {
+			color: $white;
+			@extend .proxima-bold;
+			font-size: 24px;
+
+			@include breakpoint-up(mobile) {
+				font-size: 42px;
+				margin-bottom: 40px;
+				max-width: 65%;
+			}
+		}
+	}
+
+	&:hover {
+		transform: scale(0.98);
+	}
+}

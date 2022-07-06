@@ -1,0 +1,73 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.search {
+	form {
+		position: relative;
+	}
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 300px;
+	margin-bottom: 20px;
+
+	@include breakpoint-up(mobile) {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	label {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	input[type="search"] {
+		font-size: 17px;
+		color: $color-text-1;
+		width: 300px;
+		height: 44px;
+		margin-bottom: 0;
+		padding: 4px 40px 4px 18px;
+		border: 1px solid $black;
+		border-radius: 25px;
+		background-color: $white;
+
+		&::placeholder {
+			font-size: 16px;
+			color: $grey-3;
+		}
+
+		&:focus {
+			border: 1px solid $primary-brand-1;
+		}
+	}
+
+	input[type="submit"] {
+		position: absolute;
+		right: 18px;
+		width: 14px;
+		height: 14px;
+		margin: 0;
+		top: 2px;
+		padding: 20px 20px 20px 10px;
+		border: 0;
+		background-color: $white;
+	}
+
+	&-image {
+		position: absolute;
+		top: 49%;
+		right: 16px;
+		width: 14px;
+		transform: translateY(-50%);
+		pointer-events: none;
+		height: 24px;
+	}
+}

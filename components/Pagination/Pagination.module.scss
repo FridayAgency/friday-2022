@@ -1,0 +1,41 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.pagination {
+	list-style: none;
+	@include flex-parent(row, nowrap, flex-start, center);
+
+	li {
+		padding: 7px 12px;
+		font-size: 14px;
+		a {
+			text-decoration: none;
+		}
+		&:hover {
+			background-color: $primary-brand-1;
+			a {
+				color: $white;
+			}
+		}
+
+		@include breakpoint-up(mobile) {
+			padding: 14px 24px;
+			font-size: 18px;
+		}
+	}
+}
+
+.active {
+	background-color: $primary-brand-1;
+	a {
+		color: $white;
+	}
+}
+
+.previous,
+.next {
+	&.disabled {
+		display: none;
+	}
+}

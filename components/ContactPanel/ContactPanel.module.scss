@@ -1,0 +1,69 @@
+@import "/styles/generic/mixins";
+@import "/styles/generic/variables";
+@import "./styles/generic/fonts";
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
+	width: 100%;
+
+	@include breakpoint-up(mobile) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		grid-gap: 0;
+		grid-column-gap: 80px;
+	}
+
+	.title {
+		order: 1;
+		font-size: 24px;
+		text-align: center;
+		margin: 40px 0 10px 0;
+		@include breakpoint-up(mobile) {
+			order: unset;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			font-size: 40px;
+			text-align: left;
+			margin: 80px 0 40px 0;
+		}
+	}
+	.form {
+		order: 2;
+
+		@include breakpoint-up(mobile) {
+			order: unset;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 4;
+		}
+	}
+	.details {
+		order: 0;
+	}
+	.secondary {
+		order: 3;
+		text-align: center;
+		padding: 30px 0;
+		border-top: 1px solid #d8d8d8;
+		font-size: 16px;
+		margin: auto;
+		strong {
+			font-weight: 700;
+		}
+		p {
+			word-break: break-all;
+		}
+		@include breakpoint-up(mobile) {
+			text-align: left;
+			margin: 0;
+		}
+
+		a {
+			color: $primary-brand-1;
+			text-decoration: none;
+		}
+	}
+}
