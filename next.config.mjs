@@ -82,6 +82,7 @@ const initConfig = async () => {
 				"2.gravatar.com",
 				"fri2022backdev.wpengine.com",
 				"secure.gravatar.com",
+				"headlesstes118.wpengine.com",
 			],
 			deviceSizes: [570, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 		},
