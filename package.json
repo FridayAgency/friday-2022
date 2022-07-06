@@ -8,6 +8,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
+		"wpe-build": "next build",
 		"analyze": "ANALYZE=true next build",
 		"codegen:schema": "npx apollo client:download-schema --endpoint=http://localhost:10008/graphql",
 		"gen": "graphql-codegen --config codegen.yml",
