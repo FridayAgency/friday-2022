@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "import/no-unresolved": 0,
+    "import/order": ["error", { "newlines-between": "always" }],
+    "react/react-in-jsx-scope": "off"
+  },
+  "env": {
+    "es6": true
+  },
+  "ignorePatterns": ["schema.generated.*"],
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.ts"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
+}
