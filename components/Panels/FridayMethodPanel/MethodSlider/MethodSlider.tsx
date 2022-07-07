@@ -22,7 +22,7 @@ const MethodSlider = forwardRef(
 			speed: 600,
 			fade: true,
 			arrows: false,
-			beforeChange: (next) => setSlideCounter(`${next + 1}/3`),
+			beforeChange: (next: number) => setSlideCounter(`${next + 1}/3`),
 		};
 
 		const handleNextClick = () => ref.current.slickNext();
