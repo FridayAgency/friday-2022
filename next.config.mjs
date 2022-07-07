@@ -50,7 +50,7 @@ const initConfig = async () => {
 		method: "GET",
 		credentials: "same-origin", // <-- make sure to include credentials
 		headers: {
-			"Content-Type": "application/json",
+			"Content-Type": "Content-Type multipart/form-data",
 			Accept: "application/json",
 			Authorization: "Bearer " + data?.login?.authToken,
 		},
@@ -84,6 +84,7 @@ const initConfig = async () => {
 				"secure.gravatar.com",
 				"headlesstes118.wpengine.com",
 				"headlesstesstg.wpengine.com",
+				"headless2dev.wpengine.com",
 			],
 			deviceSizes: [570, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 		},
