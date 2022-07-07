@@ -1,11 +1,9 @@
 import Image from "next/image";
-
 import {
 	Page_Pagepanels_PagePanels_AwardsPanel,
 	Page_Pagepanels_PagePanels_AwardsPanel_Awards,
 } from "../../../types/graphql";
 import Section from "../../Section";
-
 import styles from "./AwardsPanel.module.scss";
 
 interface AwardsPanelProps {
