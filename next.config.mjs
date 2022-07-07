@@ -90,10 +90,6 @@ const initConfig = async () => {
 		async redirects() {
 			return redirectsSettings;
 		},
-		i18n: {
-			locales: ["en"],
-			defaultLocale: "en",
-		},
 	};
 };
 
