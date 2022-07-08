@@ -1,246 +1,253 @@
-@import "/styles/generic/mixins";
-@import "/styles/generic/variables";
-@import "./styles/generic/fonts";
+@import '/styles/generic/mixins';
+@import '/styles/generic/variables';
+@import './styles/generic/fonts';
 
 .article {
-	max-width: 820px;
-	display: block;
-	margin: auto;
+  max-width: 820px;
+  display: block;
+  margin: auto;
 }
 
 .section {
-	padding-top: 40px;
+  padding-top: 40px;
 }
 
 .intro {
-	@include breakpoint-up(mobile) {
-		@include flex-parent(row, nowrap, space-between, center);
-		width: 100%;
-	}
-	.author {
-		@include flex-parent(row, nowrap, flex-start, center);
-		font-size: 16px;
-		margin: 16px 0;
-		.image {
-			position: relative;
-			height: 32px;
-			width: 32px;
-			border-radius: 50%;
-			overflow: hidden;
-			margin-right: 16px;
+  @include breakpoint-up(mobile) {
+    @include flex-parent(row, nowrap, space-between, center);
+    width: 100%;
+  }
+  .author {
+    @include flex-parent(row, nowrap, flex-start, center);
+    font-size: 16px;
+    margin: 16px 0;
+    @include breakpoint-up(mobile) {
+      flex-basis: 60%;
+    }
+    .image {
+      position: relative;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 16px;
 
-			@include breakpoint-up(mobile) {
-				height: 56px;
-				width: 56px;
-			}
-		}
-		.name {
-			color: $primary-brand-1;
-			text-decoration: underline;
-			margin-left: 4px;
-			display: block;
-			cursor: pointer;
-		}
-	}
+      @include breakpoint-up(mobile) {
+        height: 56px;
+        width: 56px;
+      }
+    }
+    .name {
+      color: $primary-brand-1;
+      text-decoration: underline;
+      margin-left: 4px;
+      display: block;
+      cursor: pointer;
+    }
+  }
 
-	.title {
-		font-size: 24px;
-		line-height: 32px;
-		margin: 30px 0;
-		padding: 0;
-		max-width: 90%;
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 30px 0;
+    padding: 0;
+    max-width: 90%;
 
-		@include breakpoint-up(mobile) {
-			display: none;
-		}
-	}
+    @include breakpoint-up(mobile) {
+      display: none;
+    }
+  }
 
-	.categories {
-		list-style: none;
-		margin: 24px 0;
-		@include flex-parent(row, wrap, flex-start, center);
-		font-size: 16px;
-		color: $primary-brand-1;
-		li {
-			margin-right: 16px;
-			position: relative;
-			cursor: pointer;
-			&:not(:last-child) {
-				&::after {
-					content: "/";
-					position: absolute;
-					right: -12px;
-				}
-			}
-		}
-	}
+  .categories {
+    list-style: none;
+    margin: 24px 0;
+    @include flex-parent(row, wrap, flex-start, center);
+    font-size: 16px;
+    color: $primary-brand-1;
+
+    @include breakpoint-up(mobile) {
+      justify-content: flex-end;
+    }
+    li {
+      margin-right: 16px;
+      position: relative;
+      cursor: pointer;
+      &:not(:last-child) {
+        &::after {
+          content: '/';
+          position: absolute;
+          right: -12px;
+        }
+      }
+    }
+  }
 }
 
 .content {
-	font-size: 17px;
-	line-height: 32px;
-	@extend .merriweather-regular;
+  font-size: 17px;
+  line-height: 32px;
+  @extend .merriweather-regular;
 
-	a {
-		color: $primary-brand-1;
-	}
+  a {
+    color: $primary-brand-1;
+  }
 
-	img {
-		max-width: 100%;
-		height: auto;
-		margin: 40px auto 50px auto;
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto 50px auto;
 
-		display: block;
-		margin: auto;
-	}
+    display: block;
+    margin: auto;
+  }
 
-	p {
-		margin: 30px 0;
-	}
+  p {
+    margin: 30px 0;
+  }
 
-	h1 {
-		margin: 60px 0 40px 0;
-	}
+  h1 {
+    margin: 60px 0 40px 0;
+  }
 
-	h2 {
-		margin: 40px 0 30px 0;
-	}
+  h2 {
+    margin: 40px 0 30px 0;
+  }
 
-	h3 {
-		margin: 50px 0 20px 0;
-	}
+  h3 {
+    margin: 50px 0 20px 0;
+  }
 
-	h4 {
-		margin: 20px 0 20px 0;
-	}
+  h4 {
+    margin: 20px 0 20px 0;
+  }
 
-	ul,
-	ol {
-		padding-inline-start: 40px;
-		li {
-			margin-bottom: 16px;
+  ul,
+  ol {
+    padding-inline-start: 40px;
+    li {
+      margin-bottom: 16px;
 
-			&:last-child {
-				margin-bottom: 0px;
-			}
-		}
-	}
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
 
-	blockquote {
-		@extend .merriweather-regular;
-		font-size: 32px;
-		line-height: 50px;
-		color: $black;
-		margin: 50px 0;
-		padding-left: 0px;
-		border-left: none;
-	}
-	em {
-		@extend .merriweather-italic;
-	}
+  blockquote {
+    @extend .merriweather-regular;
+    font-size: 32px;
+    line-height: 50px;
+    color: $black;
+    margin: 50px 0;
+    padding-left: 0px;
+    border-left: none;
+  }
+  em {
+    @extend .merriweather-italic;
+  }
 
-	@include breakpoint-up(mobile) {
-		max-width: 100%;
-	}
+  @include breakpoint-up(mobile) {
+    max-width: 100%;
+  }
 
-	.wp-video {
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-	}
+  .wp-video {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-	.wp-caption {
-		max-width: 100%;
-		text-align: center;
+  .wp-caption {
+    max-width: 100%;
+    text-align: center;
 
-		&.aligncenter {
-			margin: 0 auto;
-		}
-	}
+    &.aligncenter {
+      margin: 0 auto;
+    }
+  }
 
-	.wp-caption-text {
-		margin: -40px 0px 0px;
-		font-size: 14px;
-		line-height: 1.5;
-	}
+  .wp-caption-text {
+    margin: -40px 0px 0px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 .social {
-	@include flex-parent(row, nowrap, flex-start, center);
-	margin: 16px 0 24px;
+  @include flex-parent(row, nowrap, flex-start, center);
+  margin: 16px 0 24px;
 
-	p {
-		margin: 0;
-		font-size: 15px;
-		@extend .proxima-bold;
-	}
-	ul {
-		list-style: none;
-		@include flex-parent(row, nowrap, flex-start, center);
-		margin: 0 0 0 16px;
-		li {
-			position: relative;
-			display: inline-block;
-			height: 19px;
-			width: 20px;
-			margin: 0 8px;
-		}
-	}
+  p {
+    margin: 0;
+    font-size: 15px;
+    @extend .proxima-bold;
+  }
+  ul {
+    list-style: none;
+    @include flex-parent(row, nowrap, flex-start, center);
+    margin: 0 0 0 16px;
+    li {
+      position: relative;
+      display: inline-block;
+      height: 19px;
+      width: 20px;
+      margin: 0 8px;
+    }
+  }
 }
 
 .footer {
-	@include flex-parent(column, nowrap, center, center);
-	border-top: 1px solid $grey-1;
-	margin-bottom: 45px;
+  @include flex-parent(column, nowrap, center, center);
+  border-top: 1px solid $grey-1;
+  margin-bottom: 45px;
 
-	@include breakpoint-up(mobile) {
-		display: grid;
-		grid-template-rows: 2;
-		grid-template-columns: 20% 80%;
-		place-items: start;
-	}
-	.author {
-		margin: 45px 0 24px 0;
-		@include breakpoint-up(mobile) {
-			grid-row-start: 1;
-			grid-row-end: 3;
-			grid-column-start: 1;
-			grid-column-end: 2;
-			margin: 0;
-		}
-		.image {
-			position: relative;
-			height: 64px;
-			width: 64px;
-			border-radius: 50%;
-			overflow: hidden;
+  @include breakpoint-up(mobile) {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 20% 80%;
+    place-items: start;
+  }
+  .author {
+    margin: 45px 0 24px 0;
+    @include breakpoint-up(mobile) {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      margin: 0;
+    }
+    .image {
+      position: relative;
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      overflow: hidden;
 
-			@include breakpoint-up(mobile) {
-				height: 96px;
-				width: 96px;
-				margin: 40px 0;
-			}
-		}
-	}
-	.name {
-		color: $primary-brand-1;
-		font-size: 20px;
-		margin-bottom: 16px;
-		cursor: pointer;
+      @include breakpoint-up(mobile) {
+        height: 96px;
+        width: 96px;
+        margin: 40px 0;
+      }
+    }
+  }
+  .name {
+    color: $primary-brand-1;
+    font-size: 20px;
+    margin-bottom: 16px;
+    cursor: pointer;
 
-		@include breakpoint-up(mobile) {
-			margin-top: 24px;
-			margin-bottom: 0;
-		}
-	}
-	.description {
-		margin: 10px 0;
-		line-height: 26px;
-		color: #9b9b9b;
-		text-align: center;
+    @include breakpoint-up(mobile) {
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+  }
+  .description {
+    margin: 10px 0;
+    line-height: 26px;
+    color: $grey-text;
+    text-align: center;
 
-		@include breakpoint-up(mobile) {
-			text-align: left;
-		}
-	}
+    @include breakpoint-up(mobile) {
+      text-align: left;
+    }
+  }
 }

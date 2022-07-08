@@ -3,17 +3,17 @@
  */
 
 // Fallback stack
-$fallback-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,
-	"Lucida Grande", sans-serif;
+$fallback-stack: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+  Helvetica, Arial, 'Lucida Grande', sans-serif;
 
-$fallback-stack-serif: "Georgia", serif;
+$fallback-stack-serif: 'Georgia', serif;
 
 $font-size-base: 20px;
 $font-weight-base: 300;
 $line-height-base: 1.5;
 
-$ff-sans-serif: "proxima-nova", $fallback-stack;
-$ff-serif: Georgia, "Times New Roman", Times, serif;
+$ff-sans-serif: 'proxima-nova', $fallback-stack;
+$ff-serif: Georgia, 'Times New Roman', Times, serif;
 
 $t-duration: 0.25s;
 
@@ -42,6 +42,7 @@ $grey-5: #4a4a4a;
 
 // Text Colours
 $color-text-1: #353c40;
+$grey-text: #6d6d6d;
 
 // Error
 $error: #e51313;
@@ -69,23 +70,23 @@ $lastfm: #d51007;
 $responsive-ios: 812px;
 
 $breakpoints: (
-	mobile-small: 374px,
-	mobile-medium: 575px,
-	mobile: 767px,
-	admin-bar: 782px,
-	tablet: 1023px,
-	small-desktop: 1199px,
-	large-desktop: 1399px,
+  mobile-small: 374px,
+  mobile-medium: 575px,
+  mobile: 767px,
+  admin-bar: 782px,
+  tablet: 1023px,
+  small-desktop: 1199px,
+  large-desktop: 1399px,
 );
 
 .primary-background {
-	background-color: $primary-brand-1;
-	color: $white;
+  background-color: $primary-brand-1;
+  color: $white;
 }
 
 .secondary-background {
-	background-color: $primary-brand-2;
-	color: $white;
+  background-color: $primary-brand-2;
+  color: $white;
 }
 
 $text-arrow-space: 16px;
