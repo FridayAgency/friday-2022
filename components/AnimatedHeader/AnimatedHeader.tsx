@@ -14,10 +14,8 @@ export const AnimatedHeader: React.FC = () => {
   const marketingRef = useRef<HTMLSpanElement>(null!);
   const experienceRef = useRef<HTMLSpanElement>(null!);
   const outcomesRef = useRef<HTMLSpanElement>(null!);
-
   const plusRef = useRef<HTMLSpanElement>(null!);
   const equalsRef = useRef<HTMLSpanElement>(null!);
-
   const fadeOne = useRef<HTMLParagraphElement>(null!);
   const fadeTwo = useRef<HTMLSpanElement>(null!);
   const fadeThree = useRef<HTMLSpanElement>(null!);
