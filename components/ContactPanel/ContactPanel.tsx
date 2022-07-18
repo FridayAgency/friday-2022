@@ -1,11 +1,12 @@
-import { useRef } from "react";
-import { GfForm, Page_Contactpage } from "../../types/graphql";
-import ContactDetails from "../ContactDetails";
-import Editor from "../Editor";
-import GravityForm from "../GravityForms";
-import Section from "../Section";
+import { useRef } from 'react';
 
-import styles from "./ContactPanel.module.scss";
+import { GfForm, Page_Contactpage } from '../../types/graphql';
+import ContactDetails from '../ContactDetails';
+import Editor from '../Editor';
+import GravityForm from '../GravityForms';
+import Section from '../Section';
+
+import styles from './ContactPanel.module.scss';
 
 /**
  * Contact Panel
@@ -19,34 +20,34 @@ import styles from "./ContactPanel.module.scss";
  */
 
 interface ContactPanelProps {
-	contactPage: Page_Contactpage;
-	form: GfForm;
+  contactPage: Page_Contactpage;
+  form: GfForm;
 }
 
 const ContactPanel: React.FC<ContactPanelProps> = ({ contactPage, form }) => {
-	const sectionRef = useRef<HTMLDivElement>(null!);
+  const sectionRef = useRef<HTMLDivElement>(null!);
 
-	const handleClick = () => {
-		scrollTo({
-			top: sectionRef.current.offsetHeight + 200,
-			behavior: "smooth",
-		});
-	};
+  const handleClick = () => {
+    scrollTo({
+      top: sectionRef.current.offsetHeight + 200,
+      behavior: 'smooth',
+    });
+  };
 
-	return (
-		<Section>
-			<div ref={sectionRef} className={styles.wrapper}>
-				<h2 className={styles.title}>{form?.title}</h2>
-				<GravityForm form={form} className={styles.form} />
-				<ContactDetails
-					handleClick={handleClick}
-					className={styles.details}
-					address={contactPage?.contactCompanyAddress}
-				/>
-				<Editor copy={contactPage?.contactSecondaryContent} className={styles.secondary} />
-			</div>
-		</Section>
-	);
+  return (
+    <Section>
+      <div ref={sectionRef} className={styles.wrapper}>
+        <h2 className={styles.title}>{form?.title}</h2>
+        <GravityForm form={form} className={styles.form} />
+        <ContactDetails
+          handleClick={handleClick}
+          className={styles.details}
+          address={contactPage?.contactCompanyAddress}
+        />
+        <Editor copy={contactPage?.contactSecondaryContent} className={styles.secondary} />
+      </div>
+    </Section>
+  );
 };
 
 export default ContactPanel;

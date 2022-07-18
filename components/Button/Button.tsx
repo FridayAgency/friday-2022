@@ -1,4 +1,6 @@
-import styles from "./Button.module.scss";
+import cx from 'classnames';
+
+import styles from './Button.module.scss';
 
 /**
  * Button Component
@@ -15,32 +17,30 @@ import styles from "./Button.module.scss";
  */
 
 interface ButtonProps {
-	children: React.ReactNode;
-	buttonType: "link" | "button";
-	className?: "primary" | "primary-dark" | "secondary" | "secondary-dark";
-	url?: string;
+  children: React.ReactNode;
+  buttonType: 'link' | 'button';
+  className?: 'primary' | 'primary-dark' | 'secondary' | 'secondary-dark';
+  url?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
-	children,
-	buttonType = "button",
-	className,
-	url,
-	...rest
+  children,
+  buttonType = 'button',
+  className,
+  url,
+  ...rest
 }) => {
-	let buttonClass = styles.btn;
+  const btnClass: string = cx(styles.btn, { [styles[className]]: className });
 
-	if (className) buttonClass = `${buttonClass} ${styles[className]}`;
-
-	return buttonType === "link" ? (
-		<a href={url} className={buttonClass}>
-			{children}
-		</a>
-	) : (
-		<button {...rest} className={buttonClass}>
-			{children}
-		</button>
-	);
+  return buttonType === 'link' ? (
+    <a href={url} className={btnClass}>
+      {children}
+    </a>
+  ) : (
+    <button {...rest} className={btnClass}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

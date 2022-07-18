@@ -2,14 +2,6 @@ import pkg from '@apollo/client';
 const { ApolloClient, HttpLink, InMemoryCache, gql } = pkg;
 import { v4 } from 'uuid';
 
-/**
- * getApolloClient Function
- */
-
-/**
- * createApolloClient Function
- */
-
 const client = new ApolloClient({
   link: new HttpLink({
     uri: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
@@ -56,10 +48,7 @@ const initConfig = async () => {
   const redirects = await response.json();
   const redirectsSettings = redirects.items.map((item) => ({
     source: item?.url,
-    destination: item?.action_data?.url.replace(
-      process.env.NEXT_PUBLIC_WORDPRESS_URL,
-      ''
-    ),
+    destination: item?.action_data?.url.replace(process.env.NEXT_PUBLIC_WORDPRESS_URL, ''),
     permanent: true,
   }));
 
@@ -83,10 +72,9 @@ const initConfig = async () => {
       NEXT_PUBLIC_LOCAL_URL: process.env.NEXT_PUBLIC_LOCAL_URL,
       WORDPRESS_USERNAME: process.env.WORDPRESS_USERNAME,
       WORDPRESS_PASSWORD: process.env.WORDPRESS_PASSWORD,
-      NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY:
-        process.env.GOOGLE_RECAPTCHA_SITE_KEY,
-      NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY:
-        process.env.GOOGLE_RECAPTCHA_SECRET_KEY,
+      ENVIORNMENT: process.env.ENVIORNMENT,
+      NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY: process.env.GOOGLE_RECAPTCHA_SITE_KEY,
+      NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY: process.env.GOOGLE_RECAPTCHA_SECRET_KEY,
     },
     images: {
       domains: [
@@ -99,6 +87,7 @@ const initConfig = async () => {
         'headlesstes118.wpengine.com',
         'headlesstesstg.wpengine.com',
         'headless2dev.wpengine.com',
+        'headless4stg.wpengine.com',
       ],
       deviceSizes: [570, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     },

@@ -1,3 +1,5 @@
+import cx from 'classnames';
+
 import styles from './Arrows.module.scss';
 
 /**
@@ -18,17 +20,16 @@ interface ArrowProps {
   black?: boolean;
 }
 
-export const RightArrow: React.FC<ArrowProps> = ({
-  handleClick,
-  red = false,
-  black = false,
-}) => {
+export const RightArrow: React.FC<ArrowProps> = ({ handleClick, red = false, black = false }) => {
   return (
     <div onClick={handleClick} className={` ${styles['animated-arrow']}`}>
       <span
-        className={`${styles['arrow']}  ${styles.right} ${
-          red && styles['arrow-red']
-        }  ${black && styles['arrow-black']}`}
+        className={cx(
+          styles.arrow,
+          styles.right,
+          { [styles['arrow-red']]: red },
+          { [styles['arrow-black']]: black }
+        )}
       >
         <span className={styles.shaft}></span>
       </span>
@@ -36,20 +37,16 @@ export const RightArrow: React.FC<ArrowProps> = ({
   );
 };
 
-export const LeftArrow: React.FC<ArrowProps> = ({
-  handleClick,
-  red = false,
-  black = false,
-}) => {
+export const LeftArrow: React.FC<ArrowProps> = ({ handleClick, red = false, black = false }) => {
   return (
-    <div
-      onClick={handleClick}
-      className={`${styles['nav-next']} ${styles['animated-arrow']}`}
-    >
+    <div onClick={handleClick} className={cx(styles['nav-next'], styles['animated-arrow'])}>
       <span
-        className={`${styles['arrow']} ${styles.left} ${
-          red && styles['arrow-red']
-        }  ${black && styles['arrow-black']}`}
+        className={cx(
+          styles.arrow,
+          styles.left,
+          { [styles['arrow-left']]: red },
+          { [styles['arrow-black']]: black }
+        )}
       >
         <span className={styles.shaft}></span>
       </span>

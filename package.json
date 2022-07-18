@@ -2,7 +2,6 @@
   "name": "friday-2022",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +11,8 @@
     "analyze": "ANALYZE=true next build",
     "codegen:schema": "npx apollo client:download-schema --endpoint=http://localhost:10008/graphql",
     "gen": "graphql-codegen --config codegen.yml",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate": "graphql-codegen --config codegen.yml",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@apollo/client": "^3.6.8",
@@ -20,6 +20,7 @@
     "@react-three/drei": "^9.6.2",
     "@react-three/fiber": "^8.0.12",
     "@types/three": "^0.141.0",
+    "classnames": "^2.3.1",
     "cookie": "^0.4.2",
     "date-fns": "^2.28.0",
     "graphql": "^16.5.0",
@@ -59,6 +60,7 @@
     "eslint-config-next": "12.1.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.30.0"
+    "eslint-plugin-react": "^7.30.0",
+    "next-sitemap": "^3.1.10"
   }
 }

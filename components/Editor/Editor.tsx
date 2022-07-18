@@ -1,5 +1,5 @@
-import parse from "html-react-parser";
-
+import parse from 'html-react-parser';
+import cx from 'classnames';
 /**
  * Render content from wordpress Editor
  *
@@ -12,12 +12,12 @@ import parse from "html-react-parser";
  */
 
 interface EditorProps {
-	className?: string;
-	copy: string;
+  className?: string;
+  copy: string;
 }
 
 const Editor: React.FC<EditorProps> = ({ className, copy }) => {
-	return <div className={className}>{parse(copy ?? "")}</div>;
+  return <div className={cx({ className: className })}>{parse(copy ?? '')}</div>;
 };
 
 export default Editor;

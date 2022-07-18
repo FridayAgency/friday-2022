@@ -1,5 +1,7 @@
-import Link from "next/link";
-import styles from "./CtaButton.module.scss";
+import Link from 'next/link';
+import cx from 'classnames';
+
+import styles from './CtaButton.module.scss';
 
 /**
  * CtaButton Component
@@ -15,43 +17,49 @@ import styles from "./CtaButton.module.scss";
  */
 
 interface CtaButtonProps {
-	url: string;
-	title: string;
-	colour?: "white" | "red" | "black" | "solid";
-	screenReaderText?: string;
-	customClass?: string;
+  url: string;
+  title: string;
+  colour?: 'white' | 'red' | 'black' | 'solid';
+  screenReaderText?: string;
+  customClass?: string;
 }
 
 const CtaButton: React.FC<CtaButtonProps> = ({
-	url,
-	title,
-	colour,
-	screenReaderText,
-	customClass,
+  url,
+  title,
+  colour,
+  screenReaderText,
+  customClass,
 }) => {
-	const removeHttp = (url: string) => {
-		return url.replace(/^https?:\/\//, "");
-	};
-	let strippedUrl: string = removeHttp(url);
+  const removeHttp = (url: string) => {
+    return url.replace(/^https?:\/\//, '');
+  };
+  let strippedUrl: string = removeHttp(url);
 
-	const strippedWordpressUrl: string = removeHttp(process.env.NEXT_PUBLIC_WORDPRESS_URL);
-	const strippedFrontendUrl: string = removeHttp(process.env.NEXT_PUBLIC_LOCAL_URL);
+  const strippedWordpressUrl: string = removeHttp(process.env.NEXT_PUBLIC_WORDPRESS_URL);
+  const strippedFrontendUrl: string = removeHttp(process.env.NEXT_PUBLIC_LOCAL_URL);
 
-	if (strippedUrl.includes(strippedWordpressUrl)) {
-		strippedUrl = strippedUrl.replace(strippedWordpressUrl, "");
-	}
-	if (strippedUrl.includes(strippedFrontendUrl)) {
-		strippedUrl = strippedUrl.replace(strippedFrontendUrl, "");
-	}
+  if (strippedUrl.includes(strippedWordpressUrl)) {
+    strippedUrl = strippedUrl.replace(strippedWordpressUrl, '');
+  }
+  if (strippedUrl.includes(strippedFrontendUrl)) {
+    strippedUrl = strippedUrl.replace(strippedFrontendUrl, '');
+  }
 
-	return (
-		<Link href={strippedUrl}>
-			<a className={`${styles.button} ${styles[colour ?? ""]} ${customClass ?? ""}`}>
-				<span>{title}</span>
-				{screenReaderText && <span className="visuallyhidden">{screenReaderText}</span>}
-			</a>
-		</Link>
-	);
+  return (
+    <Link href={strippedUrl}>
+      <a
+        className={cx(
+          styles.button,
+          { [styles[colour]]: colour },
+          { [styles[customClass]]: customClass }
+        )}
+      >
+        <span>{title}</span>
+        {screenReaderText && <span className="visuallyhidden">{screenReaderText}</span>}
+      </a>
+    </Link>
+  );
 };
 
 export default CtaButton;
