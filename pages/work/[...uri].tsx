@@ -23,11 +23,11 @@ const Project = ({ content: project }) => {
 
 export default Project;
 
-// export const getStaticProps: GetStaticProps = async ({ params }): Promise<PostTypeStaticProps> => {
-// 	const uri = `/${params.uri[params.uri.length - 1]}/`;
+export const getStaticProps: GetStaticProps = async ({ params }): Promise<PostTypeStaticProps> => {
+	const uri = `/${params.uri[params.uri.length - 1]}/`;
 
-// 	return getPostTypeStaticProps(uri, postType);
-// };
+	return getPostTypeStaticProps(uri, postType);
+};
 
 export const getStaticPaths: GetStaticPaths = () => {
 	return {
