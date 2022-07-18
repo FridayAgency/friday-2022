@@ -17,7 +17,8 @@ interface EditorProps {
 }
 
 const Editor: React.FC<EditorProps> = ({ className, copy }) => {
-  return <div className={cx({ className: className })}>{parse(copy ?? '')}</div>;
+  return <div className={cx(className)}>{parse(copy ?? '')}</div>;
 };
 
 export default Editor;
+// 

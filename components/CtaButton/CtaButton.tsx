@@ -52,7 +52,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({
         className={cx(
           styles.button,
           { [styles[colour]]: colour },
-          { [styles[customClass]]: customClass }
+          customClass
         )}
       >
         <span>{title}</span>
