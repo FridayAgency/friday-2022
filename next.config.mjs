@@ -1,6 +1,7 @@
 import pkg from '@apollo/client';
 const { ApolloClient, HttpLink, InMemoryCache, gql } = pkg;
 import { v4 } from 'uuid';
+const WP_HOST = new URL(process.env.NEXT_PUBLIC_WORDPRESS_URL).hostname;
 
 const client = new ApolloClient({
   link: new HttpLink({
@@ -83,7 +84,7 @@ const initConfig = async () => {
         '0.gravatar.com',
         '2.gravatar.com',
         'secure.gravatar.com',
-        [WP_HOST],
+         WP_HOST,
       ],
       deviceSizes: [570, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     },
