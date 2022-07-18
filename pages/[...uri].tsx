@@ -71,6 +71,13 @@ export const getStaticProps: GetStaticProps = async ({ params }): Promise<PostTy
 	return getPostTypeStaticProps(pageUri, postType);
 };
 
-export const getStaticPaths: GetStaticPaths = async (): Promise<PathsPromise> => {
-	return getPostTypeStaticPaths(postType);
-};
+// export const getStaticPaths: GetStaticPaths = async (): Promise<PathsPromise> => {
+// 	return getPostTypeStaticPaths(postType);
+// };
+
+export const getStaticPaths: GetStaticPaths = () => {
+	return {
+	  paths: [],
+	  fallback: 'blocking',
+	};
+  }
