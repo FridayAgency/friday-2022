@@ -77,6 +77,7 @@ const initConfig = async () => {
       NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY: process.env.GOOGLE_RECAPTCHA_SITE_KEY,
       NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY: process.env.GOOGLE_RECAPTCHA_SECRET_KEY,
       NEXT_TOKEN: process.env.NEXT_TOKEN,
+      NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID,
     },
     images: {
       domains: [
@@ -85,7 +86,7 @@ const initConfig = async () => {
         '0.gravatar.com',
         '2.gravatar.com',
         'secure.gravatar.com',
-         WP_HOST,
+        WP_HOST,
       ],
       deviceSizes: [570, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     },
