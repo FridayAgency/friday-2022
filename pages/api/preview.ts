@@ -4,8 +4,12 @@ import cookie from "cookie";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAuthToken } from "../../lib/auth/getAuthToken";
 
-const preview = async (req: NextApiRequest, res: NextApiResponse) => {
-	const { postType, preview_id, slug } = req.query;
+const preview = async (req: NextApiRequest, res: NextApiResponse):Promise<void> => {
+	const { postType, preview_id, slug, token} = req.query;
+
+	if((token as string) !== process.env.NEXT_TOKEN){
+        return res.status(401).json({message:"Invalid Token"})
+    }
 
 	const previewUrl = getPreviewRedirectUrl(postType, preview_id, slug);
 	const authTokenCookie = getAuthTokenCookie(req);

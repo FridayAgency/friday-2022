@@ -76,6 +76,7 @@ const initConfig = async () => {
       ENVIORNMENT: process.env.ENVIORNMENT,
       NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY: process.env.GOOGLE_RECAPTCHA_SITE_KEY,
       NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY: process.env.GOOGLE_RECAPTCHA_SECRET_KEY,
+      NEXT_TOKEN: process.env.NEXT_TOKEN,
     },
     images: {
       domains: [

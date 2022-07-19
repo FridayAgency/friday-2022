@@ -1,9 +1,4 @@
-import {
-  ApolloClient,
-  HttpLink,
-  InMemoryCache,
-  NormalizedCacheObject,
-} from '@apollo/client';
+import { ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
 
 export let client: ApolloClient<NormalizedCacheObject>;
 
@@ -28,5 +23,11 @@ export const _createApolloClient = () => {
       uri: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
     }),
     cache: new InMemoryCache(),
+    defaultOptions: {
+      query: {
+        fetchPolicy: 'no-cache',
+        errorPolicy: 'all',
+      },
+    },
   });
 };
