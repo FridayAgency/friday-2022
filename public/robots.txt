@@ -2,7 +2,7 @@
 User-agent: *
 
 # Host
-Host: http://localhost:3000
+Host: https://www.friday.ie
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://www.friday.ie/sitemap.xml
