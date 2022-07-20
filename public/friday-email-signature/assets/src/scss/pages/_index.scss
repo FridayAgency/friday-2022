@@ -1,0 +1,95 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    Home
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+/*  ========================================================================== 
+    1. 
+    ========================================================================== */
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 60px;
+}
+h1 {
+    @extend .sans-regular;
+    color: $color-brand-2;
+    border-top: 1px solid $color-brand-1;
+    border-bottom: 1px solid $color-brand-1;
+    padding: 20px 0;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+h2 {
+    @extend .sans-regular;
+    background: $color-brand-2;
+    padding: 20px 0;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #FFF;
+    padding: 15px;
+    margin-bottom: 0px;
+    &.green {
+        background: $color-brand-1;
+    }
+}
+.generator {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-gap: 60px;
+    position: relative;
+    form {
+        background: #e5e5e5;
+        padding: 15px;
+        input.submit {
+            background: $color-brand-1;
+            border: none;
+            color: #FFF;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            &:hover, &:focus {
+                background: $color-brand-2;
+            }
+        }
+    }
+}
+label {
+    @extend .sans-regular;
+}
+.button {
+    background: $color-brand-1;
+    border: none;
+    color: #FFF;
+    width: auto;
+    padding: 10px;
+    font-size: 12px;
+    &:hover, &:focus {
+        background: $color-brand-2;
+    }
+}
+
+#generated_code__wrapper{
+    display: none;
+}
+.generate_code_btn {
+    background-color: #eee;
+    padding: 5px;
+    //text-align: right;
+}
+#generated_code_to_copy {
+    background-color: #eee;
+    padding: 10px;
+}

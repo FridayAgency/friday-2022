@@ -1,0 +1,111 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    General
+    1. Base Styles 
+    2. Images
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+/*  ========================================================================== 
+    1. Base Styles opinionated defaults 
+    ========================================================================== */
+
+    html {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        background-color: $base-background-color;
+        color: $base-font-color;
+        font-feature-settings: "kern" !important;
+    }
+
+/*
+    * Remove text-shadow in selection highlight:
+    * https://twitter.com/miketaylr/status/12228805301
+    *
+    * These selection rule sets have to be separate.
+    * Customize the background color to match your design.
+ */
+
+    ::-moz-selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $selection;
+        text-shadow: none;
+    }
+
+/*
+    * Remove the gap between audio, canvas, iframes,
+    * images, videos and the bottom of their containers:
+    * https://github.com/h5bp/html5-boilerplate/issues/440
+*/
+
+
+
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+        vertical-align: middle;
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $base-border;
+        margin: $base-spacing 0;
+        padding: 0;
+    }
+
+    blockquote {
+        border-left: 2px solid $base-border-color;
+        color: lighten($base-font-color, 15);
+        margin: $base-spacing 0;
+        padding-left: $base-spacing / 2;
+    }
+
+    cite {
+        color: lighten($base-font-color, 25);
+        font-style: italic;
+
+        &:before {
+            content: "\2014 \00A0";
+        }
+    }
+/*  ==========================================================================
+    2. Images
+    ========================================================================== */
+    
+    img,
+    picture {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    img {
+        vertical-align: middle; // remove gap from bottom of images
+        border: 0; // remove blue line border
+        -ms-interpolation-mode: bicubic; // image smoothing for IE 7
+        image-rendering: optimizeQuality; // For Firefox 3.6 and above;
+    } 
+
+
+   

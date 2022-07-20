@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jaysus, Mary and Joseph!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Jaysus, Mary & Joseph">
+    <meta property="og:site_name" content="Friday Agency - Jaysus, Mary & Joseph">
+    <meta property="og:url" content="https://www.friday.ie/jaysus">
+    <meta property="og:image" content="https://www.friday.ie/jaysus/img/og-banner.png">
+    <meta property="article:author" content="https://www.friday.ie">
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-FX3H44"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-FX3H44');</script>
+    <!-- End Google Tag Manager -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+
+    <style>
+    @font-face {
+        font-family: 'Pioggia Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Pioggia Regular'), url('Pioggia.woff') format('woff');
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    /* Mobile styles */
+    .jaysus__wrapper {
+        z-index: 2;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .disco-ball {
+        position: absolute;
+        top: 0px;
+    }
+
+    .floor {
+        position: absolute;
+        bottom: 0px;
+        opacity: 0.7;
+    }
+
+    .lines {
+        position: absolute;
+        top: 22%;
+    }
+
+    .logo {
+        -webkit-animation: action 2s infinite  alternate;
+        animation: action 2s infinite  alternate;
+    }
+
+    @-webkit-keyframes action {
+        0% { transform: translateY(5px); }
+        100% { transform: translateY(-5px); }
+    }
+    @keyframes action {
+        0% { transform: translateY(5px); }
+        100% { transform: translateY(-5px); }
+    }
+
+
+    .star {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .other .star {
+        z-index: -1;
+    }
+    .star img {
+        width: 12px;
+        height: auto;
+    }
+    .star-1 {
+        top: 10vh;
+        left: 20vw;
+    }
+    .star-2 {
+        top: 12vh;
+        left: 60vw;
+    }
+    .star-2 img {
+        width: 18px;
+        height: auto;
+    }
+    .star-3 {
+        top: 30vh;
+        left: 90vw;
+    }
+    .star-3 img {
+        width: 15px;
+        height: auto;
+    }
+    .star-4 {
+        top: 40vh;
+        left: 85vw;
+    }
+    .star-4 img {
+        width: 10px;
+        height: auto;
+    }
+    .star-5 {
+        top: 50vh;
+        left: 93vw;
+    }
+    .star-5 img {
+        width: 20px;
+        height: auto;
+    }
+    .star-6 {
+        top: 67vh;
+        left: 87vw;
+    }
+    .star-6 img {
+        width: 10px;
+        height: auto;
+    }
+    .star-7 {
+        top: 64vh;
+        left: 60vw;
+    }
+    .star-8 {
+        top: 70vh;
+        left: 10vw;
+    }
+    .star-9 {
+        top: 56vh;
+        left: 7vw;
+    }
+    .star-9 img {
+        width: 17px;
+        height: auto;
+    }
+    .star-10 {
+        top: 45vh;
+        left: 10vw;
+    }
+    .star-11 {
+        top: 28vh;
+        left: 6vw;
+    }
+    .star-11 img {
+        width: 14px;
+        height: auto;
+    }
+    /* Desktop starts */
+    .star-12 {
+        top: 12vh;
+        left: 20vw;
+    }
+    .star-12 img {
+        width: 14px;
+        height: auto;
+    }
+    .star-13 {
+        top: 20vh;
+        left: 45vw;
+    }
+    .star-13 img {
+        width: 18px;
+        height: auto;
+    }
+    .star-14 {
+        top: 17vh;
+        left: 65vw;
+    }
+    .star-14 img {
+        width: 14px;
+        height: auto;
+    }
+    .star-15 {
+        top: 24vh;
+        left: 70vw;
+    }
+    .star-15 img {
+        width: 20px;
+        height: auto;
+    }
+    .star-16 {
+        top: 40vh;
+        left: 90vw;
+    }
+    .star-16 img {
+        width: 18px;
+        height: auto;
+    }
+    .star-17 {
+        top: 55vh;
+        left: 83vw;
+    }
+    .star-17 img {
+        width: 12px;
+        height: auto;
+    }
+    .star-18 {
+        top: 70vh;
+        left: 87vw;
+    }
+    .star-18 img {
+        width: 15px;
+        height: auto;
+    }
+    .star-19 {
+        top: 60vh;
+        left: 10vw;
+    }
+    .star-19 img {
+        width: 18px;
+        height: auto;
+    }
+    .star-20 {
+        top: 50vh;
+        left: 5vw;
+    }
+    .star-20 img {
+        width: 14px;
+        height: auto;
+    }
+    .star-21 {
+        top: 40vh;
+        left: 9vw;
+    }
+    .star-21 img {
+        width: 17px;
+        height: auto;
+    }
+    .star-22 {
+        top: 25vh;
+        left: 11vw;
+    }
+    .star-22 img {
+        width: 14px;
+        height: auto;
+    }
+    .star-23 {
+        top: 10vh;
+        left: 4vw;
+    }
+    .star-23 img {
+        width: 16px;
+        height: auto;
+    }
+    .star:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 5px;
+        height: 5px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+        from {
+            box-shadow: 0 0 80px -10px #e60073;
+        }
+          to {
+            box-shadow: 0 0 40px 10px #ff4da6;
+          }
+    }
+
+    .link {
+        transition: .3s;
+    }
+
+    .link:hover,
+    .link:focus,
+    .link:active {
+        opacity: 0.6;
+    }
+
+    .android {
+        padding: 0px 5%;
+    }
+
+    .jaysus__wrapper h2 {
+        max-width: 270px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        text-shadow: 0 0 2px #000;
+    }
+
+    .jaysus__wrapper p {
+        max-width: 270px;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        text-shadow: 0 0 2px #000;
+    }
+
+    .friday-logo-mobile {
+      position: absolute;
+      z-index: 5;
+      top: 10px;
+      right: 10px;
+    }
+    /* end Mobile styles */
+
+
+    /* Desktop */
+    .jaysus__wrapper--desktop {
+        width: 100vw;
+        min-height: 100vh;
+        background: rgb(102,98,204);
+        background: linear-gradient(0deg, rgba(102,98,204,1) 0%, rgba(102,98,204,1) 14%, rgba(0,0,0,1) 63%);
+    }
+
+    .desktop-content {
+        z-index: 2;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 5%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .desktop-content {
+            padding: 5% 5% 70px 5%;
+        }
+    }
+
+    .desktop-content__image {
+        margin-right: 5%;
+        -webkit-animation: action 2s infinite  alternate;
+        animation: action 2s infinite  alternate;
+    }
+
+    .desktop-content__body h1 {
+        font-family:'Pioggia Regular';
+        font-weight:normal;
+        font-size: 45px;
+        line-height: 45px;
+        color: white;
+        margin: 10px 0px 40px;
+        max-width: 500px;
+    }
+
+    .desktop-content__body h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #FFC600;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .desktop-content__body ol {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        padding-left: 16px;
+        margin-bottom: 40px;
+        max-width: 420px;
+    }
+
+    .desktop-content__body span {
+        color: #FFC600;
+    }
+
+    .desktop-content__body p {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+
+
+    .desktop-content__body a {
+        font-family: 'Roboto', sans-serif;
+        color: #20DFB1;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    .desktop-content__body a:hover {
+        color: #FFC600;
+    }
+
+    p.follow-us {
+        font-size: 12px;
+        margin-top: 40px;
+        text-transform: uppercase;
+    }
+
+    p.copyright {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 10px;
+        margin: 0px;
+        padding: 20px 5%;
+        font-weight: 400;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .friday-logo {
+        margin: 0px;
+        position: absolute;
+        right: 20px;
+        bottom: 18px;
+    }
+
+    .social-icons {
+        display: flex;
+        position: absolute;
+        bottom: 21px;
+        right: 120px;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .social-icons {
+            bottom: 21px;
+            right: 0px;
+        }
+
+        .friday-logo {
+            bottom: 70px;
+            right: 5%;
+        }
+    }
+
+    .social-icons li {
+        margin-right: 30px;
+        transition: .3s;
+    }
+    /* end Desktop */
+
+    .ios,
+    .android,
+    .other,
+    .ios__wrapper,
+    .android__wrapper,
+    .chromeIos {
+        display: none;
+        z-index: 2;
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="jaysus">
+            <div class="jaysus__wrapper android__wrapper ios__wrapper" style="background-image: url(img/background.jpg)">
+                <a class="friday-logo-mobile" href="https://www.friday.ie" target="_blank"><img src="img/friday-logo.svg"  alt="Friday logo" /></a>
+                <img class="disco-ball" src="img/disco-ball.png" width="100%" height="auto" alt="Disco ball" />
+                <img class="lines" src="img/lines.png" width="100%" height="auto" alt="Neon lines" />
+
+                <div class="star star-1">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-2">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-3">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-4">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-5">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-6">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-7">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-8">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-9">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-10">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+                <div class="star star-11">
+                    <img src="img/star.png" alt="Glowing star" />
+                </div>
+
+                <img class="logo" src="img/logo.png" width="300px" height="auto" alt="AR Logo" />
+                <a rel="ar" href="friday.reality" class="link ios">
+                   <img src="img/play.png" alt="AR View" width="220px" height="auto" />
+                </a>
+                <div class="chromeIos">
+                    <h2>DANG!</h2>
+                    <p>You appear to be using Chrome. Open this up in Safari to play!</p>
+                </div>
+                <div class="android">
+                    <h2>DANG!</h2>
+                    <p>You appear to have an Android phone. Ask a good Samaritan to play on their iPhone.</p>
+                </div>
+                <img class="floor" src="img/floor.png" width="100%" height="auto" alt="Disco floor" />
+            </div>
+
+            <div class="jaysus__wrapper--desktop other">
+                <div class="desktop-content">
+                    <img class="desktop-content__image" src="img/phone.png" alt="Mobile mockup" />
+                    <div class="desktop-content__body">
+                        <h1><span>A New</span> augmented Christmas experience for iOS.</h1>
+
+                        <h2>How to play</h2>
+                        <ol>
+                            <li><p>On an iOS device, open any browser and go to: <a href="https://www.friday.ie/jaysus">friday.ie/jaysus</a></p></li>
+                            <li><p>Get creative and find a flat surface to place your dancers. Use the button to switch up the dance moves.</p></li>
+                            <li><p>Use the photo button to take photos or video and share your experience on social media using the hashtag <a href="https://twitter.com/hashtag/AhJaysus" target="_blank" rel="noopener noreferrer">#ahjaysus</a></p></li>
+                        </ol>
+                    </div>
+
+                    <div class="star star-12">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-13">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-14">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-15">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-16">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-17">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-18">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-19">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-20">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-21">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-22">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+                    <div class="star star-23">
+                        <img src="img/star.png" alt="Glowing star" />
+                    </div>
+
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/fridayagency" target="_blank"><img src="img/facebook.svg" alt="Facebook icon" /></a></li>
+                        <li><a href="https://www.instagram.com/fridayagency/" target="_blank"><img src="img/twitter.svg" alt="Twitter icon" /></a></li>
+                        <li><a href="https://twitter.com/FridayAgency" target="_blank"><img src="img/instagram.svg" alt="Instagram icon" /></a></li>
+                    </ul>
+
+                    <a href="https://www.friday.ie" target="_blank"><img class="friday-logo" src="img/friday-logo.svg"  alt="Friday logo" /></a>
+                    <p class="copyright">&copy; Friday 2019</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    const ios = document.querySelector('.ios');
+    const android = document.querySelector('.android');
+    const iosWrapper = document.querySelector('.ios__wrapper');
+    const androidWrapper = document.querySelector('.android__wrapper');
+    const other = document.querySelector('.other');
+    const chromeIos = document.querySelector('.chromeIos');
+    var isChrome = /CriOS/.test(navigator.userAgent);
+
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        }
+    };
+
+    if(isMobile.iOS()){
+      iosWrapper.style.display = "flex";
+      if(isChrome) {
+        chromeIos.style.display = "block";
+      } else {
+        ios.style.display = "block";
+      }
+
+    } else if(isMobile.Android()) {
+        android.style.display = "block";
+        androidWrapper.style.display = "flex";
+    } else {
+        other.style.display = "block";
+    }
+
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    </script>
+</body>
+</html>
