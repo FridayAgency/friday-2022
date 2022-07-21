@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap, Power1, Power4 } from 'gsap';
 
 import styles from './AnimatedHeader.module.scss';
+import Link from 'next/link';
 
 /**
  * Animated Header
@@ -172,22 +173,14 @@ export const AnimatedHeader: React.FC = () => {
         duration: 0.25,
         ease: Power1.easeIn,
       })
-      .to(
-        [plusRef.current, equalsRef.current],
-        { opacity: 0, duration: 0.25 },
-        '=+1'
-      )
+      .to([plusRef.current, equalsRef.current], { opacity: 0, duration: 0.25 }, '=+1')
       .to(
         [marketingRef.current, experienceRef.current, outcomesRef.current],
         { y: 0, x: 0, duration: 2, ease: Power4.easeOut },
         '=+.5'
       )
 
-      .to(
-        fadeOne.current,
-        { opacity: 1, duration: 0.25, ease: Power1.easeIn },
-        '=+1'
-      )
+      .to(fadeOne.current, { opacity: 1, duration: 0.25, ease: Power1.easeIn }, '=+1')
       .to([fadeTwo.current, fadeThree.current], {
         opacity: 1,
         duration: 0.25,
@@ -222,13 +215,17 @@ export const AnimatedHeader: React.FC = () => {
             We unite
           </span>{' '}
           <span ref={marketingRef} className={styles.bold}>
-            Digital Marketing
+            <Link href="/expertise/digital-marketing/">
+              <a>Digital Marketing</a>
+            </Link>
           </span>{' '}
           <span ref={fadeThree} className={styles.fade}>
             with the power of
           </span>{' '}
           <span ref={experienceRef} className={styles.bold}>
-            User Experience
+            <Link href="/expertise/user-experience/">
+              <a>User Experience</a>
+            </Link>
           </span>{' '}
           <span ref={fadeFour} className={styles.fade}>
             design to

@@ -3,40 +3,40 @@
 \* ------------------------------------------------------------ */
 
 body {
-	min-width: 320px;
-	background: #fff;
-	font-family: $ff-sans-serif;
-	font-weight: $font-weight-base;
-	@include font-size($body-font-size);
-	line-height: $line-height-base;
-	color: $color-text-1;
+  min-width: 320px;
+  background: #fff;
+  font-family: $ff-sans-serif;
+  font-weight: $font-weight-base;
+  @include font-size($body-font-size);
+  line-height: $line-height-base;
+  color: $color-text-1;
 
-	@include breakpoint-down(mobile) {
-		font-size: 18px;
-		line-height: 1.39;
-	}
+  @include breakpoint-down(mobile) {
+    font-size: 18px;
+    line-height: 1.39;
+  }
 }
 
 a {
-	color: inherit;
-	text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 
-	&:hover {
-		text-decoration: none;
-	}
+  &:hover {
+    text-decoration: none;
+  }
 
-	&[href^="tel"] {
-		text-decoration: none;
+  &[href^='tel'] {
+    text-decoration: none;
 
-		&:hover {
-			cursor: pointer;
-			text-decoration: underline;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 
-	&[href^="mail"] {
-		word-break: break-all;
-	}
+  &[href^='mail'] {
+    word-break: break-all;
+  }
 }
 
 .h1,
@@ -51,7 +51,7 @@ h4,
 h5,
 .h6,
 h6 {
-	margin-bottom: calc(#{$line-height-base}em / 2);
+  margin-bottom: calc(#{$line-height-base}em / 2);
 }
 
 h1,
@@ -60,54 +60,54 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "proxima-nova", $fallback-stack;
-	font-weight: 700;
-	font-style: normal;
-	line-height: 120%;
+  font-family: 'proxima-nova', $fallback-stack;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 120%;
 }
 
 h1 {
-	@include font-size($h1-font-size-mobile);
-	line-height: 1.2;
-	@include breakpoint-up(mobile) {
-		@include font-size($h1-font-size);
-		line-height: 1.2;
-	}
+  @include font-size($h1-font-size-mobile);
+  line-height: 1.2;
+  @include breakpoint-up(mobile) {
+    @include font-size($h1-font-size);
+    line-height: 1.2;
+  }
 }
 
 h2 {
-	@include font-size($h2-font-size-mobile);
-	@include breakpoint-up(mobile) {
-		@include font-size($h2-font-size);
-		line-height: 1.2;
-	}
+  @include font-size($h2-font-size-mobile);
+  @include breakpoint-up(mobile) {
+    @include font-size($h2-font-size);
+    line-height: 1.2;
+  }
 }
 
 h3 {
-	@include font-size($h3-font-size-tablet);
-	@include breakpoint-up(tablet) {
-		@include font-size($h3-font-size);
-		line-height: 1.2;
-	}
+  @include font-size($h3-font-size-tablet);
+  @include breakpoint-up(tablet) {
+    @include font-size($h3-font-size);
+    line-height: 1.2;
+  }
 }
 
 h4 {
-	@include font-size($h4-font-size-mobile);
-	@include breakpoint-up(tablet) {
-		@include font-size($h4-font-size);
-	}
+  @include font-size($h4-font-size-mobile);
+  @include breakpoint-up(tablet) {
+    @include font-size($h4-font-size);
+  }
 }
 
 h5 {
-	@include font-size($h5-font-size);
+  @include font-size($h5-font-size);
 }
 
 h6 {
-	@include font-size($h6-font-size);
+  @include font-size($h6-font-size);
 }
 
 p {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 p,
@@ -117,25 +117,9 @@ dl,
 hr,
 table,
 blockquote {
-	margin-bottom: #{$line-height-base}em;
+  margin-bottom: #{$line-height-base}em;
 }
 
-// h1[class],
-// h2[class],
-// h3[class],
-// h4[class],
-// h5[class],
-// h6[class],
-// h1:last-child,
-// h2:last-child,
-// h3:last-child,
-// h4:last-child,
-// h5:last-child,
-// h6:last-child,
-// ul:last-child,
-// ol:last-child,
-// dl:last-child,
-// table:last-child,
-// blockquote:last-child {
-// 	margin-bottom: 0;
-// }
+.homepage-link {
+  text-decoration: none;
+}
