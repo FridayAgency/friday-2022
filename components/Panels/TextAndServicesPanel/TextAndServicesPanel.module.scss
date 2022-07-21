@@ -1,61 +1,61 @@
-@import "/styles/generic/mixins";
-@import "/styles/generic/variables";
-@import "./styles/generic/fonts";
+@import '/styles/generic/mixins';
+@import '/styles/generic/variables';
+@import './styles/generic/fonts';
 
 .content {
-	max-width: 768px;
-	ul,
-	ol {
-		padding-inline-start: 40px;
+  max-width: 768px;
+  ul,
+  ol {
+    padding-inline-start: 40px;
 
-		li {
-			font-size: 16px;
-			padding-right: 40px;
-		}
-	}
-	padding-bottom: 30px;
+    li {
+      font-size: 16px;
+      padding-right: 40px;
+    }
+  }
+  padding-bottom: 30px;
 
-	@include breakpoint-up(mobile) {
-		padding-bottom: 80px;
-	}
+  @include breakpoint-up(mobile) {
+    padding-bottom: 50px;
+  }
 }
 
 .services {
-	max-width: 768px;
-	width: 100%;
+  max-width: 768px;
+  width: 100%;
 
-	h4 {
-		margin-bottom: 10px;
-		padding-left: 5px;
-		color: $primary-brand-1;
-		font-size: 20px;
-		@extend .proxima-regular;
-	}
-	ul {
-		@include flex-parent(row, wrap, flex-start, center);
-		list-style: none;
+  h4 {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    color: $primary-brand-1;
+    font-size: 20px;
+    @extend .proxima-regular;
+  }
+  ul {
+    @include flex-parent(row, wrap, flex-start, center);
+    list-style: none;
 
-		li {
-			margin: 8px 6px 0 0;
-			white-space: nowrap;
-			cursor: pointer;
-			border: 1px solid $primary-brand-1;
-			border-radius: 20px;
-			color: $black;
-			font-size: 14px;
-			text-decoration: none;
-			transition: all 0.3s ease-in-out;
-			padding: 0 15px;
-			height: 28px;
-			line-height: 26px;
-			&:hover {
-				background: $primary-brand-1;
-				color: $white;
-			}
+    li {
+      margin: 8px 6px 0 0;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid $primary-brand-1;
+      border-radius: 20px;
+      color: $black;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      padding: 0 15px;
+      height: 28px;
+      line-height: 26px;
+      &:hover {
+        background: $primary-brand-1;
+        color: $white;
+      }
 
-			a {
-				text-decoration: none;
-			}
-		}
-	}
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }

@@ -1,75 +1,76 @@
-@import "/styles/generic/mixins";
-@import "/styles/generic/variables";
-@import "./styles/generic/fonts";
+@import '/styles/generic/mixins';
+@import '/styles/generic/variables';
+@import './styles/generic/fonts';
 
 .blob {
-	&-header {
-		background-color: #ff163c;
-		position: relative;
-		@include flex-parent(column, nowrap, center, center);
+  &-header {
+    background-color: #ff163c;
+    position: relative;
+    @include flex-parent(column, nowrap, center, center);
 
-		&.half {
-			height: 50vh;
-		}
+    &.half {
+      height: 50vh;
+    }
 
-		&.full {
-			height: calc(100vh + 100px);
-		}
+    &.full {
+      height: calc(100vh + 100px);
+    }
 
-		h1 {
-			z-index: 2;
-			color: $white;
-			text-align: center;
-		}
+    h1 {
+      z-index: 2;
+      color: $white;
+      text-align: center;
+      padding: 10px;
+    }
 
-		.image {
-			position: relative;
-			height: 107px;
-			width: 295px;
-			z-index: 2;
+    .image {
+      position: relative;
+      height: 107px;
+      width: 295px;
+      z-index: 2;
 
-			@include breakpoint-up(mobile) {
-				height: 238px;
-				width: 650px;
-			}
-		}
+      @include breakpoint-up(mobile) {
+        height: 238px;
+        width: 650px;
+      }
+    }
 
-		&__subtitle {
-			z-index: 2;
-			color: $white;
-			font-size: 22px;
-			max-width: 300px;
-			margin: 40px auto 0 auto;
-			text-align: center;
-			@extend .proxima-bold;
-			span {
-				font-weight: 800;
-			}
+    &__subtitle {
+      z-index: 2;
+      color: $white;
+      font-size: 22px;
+      max-width: 300px;
+      margin: 40px auto 0 auto;
+      text-align: center;
+      @extend .proxima-bold;
+      span {
+        font-weight: 800;
+      }
 
-			@include breakpoint-up(mobile) {
-				max-width: 650px;
-				font-size: 30px;
-			}
-		}
+      @include breakpoint-up(mobile) {
+        max-width: 650px;
+        font-size: 30px;
+      }
+    }
 
-		.arrow {
-			position: absolute;
-			bottom: 190px;
-			right: 50%;
-			width: 24px;
-			height: 12px;
-			transform: translateX(50%);
-			background-image: url("/images/icon--arrow--white.svg");
-			background-size: 24px 12px;
+    .arrow {
+      position: absolute;
+      bottom: 190px;
+      right: 50%;
+      width: 24px;
+      height: 12px;
+      transform: translateX(50%);
+      background-image: url('/images/icon--arrow--white.svg');
+      background-size: 24px 12px;
 
-			content: "";
-			cursor: pointer;
-			transition: 0.3s;
-			z-index: 2;
+      content: '';
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 2;
 
-			@include breakpoint-up(mobile) {
-				bottom: 150px;
-			}
-		}
-	}
+      @include breakpoint-up(mobile) {
+        bottom: 150px;
+      }
+    }
+  }
 }

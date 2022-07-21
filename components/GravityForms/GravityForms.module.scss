@@ -22,58 +22,58 @@
   }
 
   .gfield {
-    @include flex-parent(column, nowrap, space-between, flex-start);
-    position: relative;
-    width: 100%;
+    // @include flex-parent(column, nowrap, space-between, flex-start);
+    // position: relative;
+    // width: 100%;
     label {
-      position: absolute;
-      top: 20px;
-      left: 15px;
-      transition: 0.3s;
-      margin-bottom: 0;
+      // position: absolute;
+      // top: 20px;
+      // left: 15px;
+      // transition: 0.3s;
+      // margin-bottom: 0;
 
-      abbr {
-        display: none;
-      }
+      // abbr {
+      //   display: none;
+      // }
     }
-    :global {
-      label.active {
-        transition: all 0.1s ease-in;
-        top: 6px;
-        font-size: 13px;
-        color: $primary-brand-1;
-      }
-      label.required {
-        &::after {
-          content: '*';
-        }
-      }
+    // :global {
+    //   label.active {
+    //     transition: all 0.1s ease-in;
+    //     top: 6px;
+    //     font-size: 13px;
+    //     color: $primary-brand-1;
+    //   }
+    //   label.required {
+    //     &::after {
+    //       content: '*';
+    //     }
+    //   }
 
-      .error-message {
-        background: #9b9b9b;
-        color: #fff;
-        font-size: 13px;
-        padding: 3px 15px;
-        width: 100%;
-        text-align: center;
-        margin-top: -14px;
+    //   .error-message {
+    //     background: #9b9b9b;
+    //     color: #fff;
+    //     font-size: 13px;
+    //     padding: 3px 15px;
+    //     width: 100%;
+    //     text-align: center;
+    //     margin-top: -14px;
 
-        &::after {
-          content: '!';
-          position: absolute;
-          right: 15px;
-          top: 20px;
-          width: 20px;
-          height: 20px;
-          background: #ff163c;
-          text-align: center;
-          color: #fff;
-          line-height: 20px;
-          border-radius: 50%;
-          font-size: 13px;
-        }
-      }
-    }
+    //     &::after {
+    //       content: '!';
+    //       position: absolute;
+    //       right: 15px;
+    //       top: 20px;
+    //       width: 20px;
+    //       height: 20px;
+    //       background: #ff163c;
+    //       text-align: center;
+    //       color: #fff;
+    //       line-height: 20px;
+    //       border-radius: 50%;
+    //       font-size: 13px;
+    //     }
+    //   }
+    // }
 
     input[type='color'],
     input[type='date'],
@@ -128,11 +128,7 @@
     color: $primary-brand-1;
     margin: 40px 0;
     //bg transition setup
-    background-image: linear-gradient(
-      135deg,
-      $primary-brand-1 50%,
-      transparent 51%
-    );
+    background-image: linear-gradient(135deg, $primary-brand-1 50%, transparent 51%);
     background-size: 100px 100px; /* some initial size to get the slanted appearance */
     background-position: -50px -50px; /* negative positioning to hide it initially */
     background-repeat: no-repeat;
@@ -142,6 +138,19 @@
       background-size: 200% 200%; /* 200% because gradient is colored only for 50% */
       background-position: 0px 0px; /* bring it fully into view */
       color: #fff;
+    }
+  }
+  :global {
+    input:-webkit-autofill {
+      animation-name: onAutoFillStart;
+
+      transition: background-color 0.2s ease-in-out 0s;
+      -webkit-box-shadow: 0 0 0 1000px #f0f0f0 inset !important;
+      box-shadow: 0 0 0 1000px #f0f0f0 inset;
+    }
+
+    input:not(:-webkit-autofill) {
+      animation-name: onAutoFillCancel;
     }
   }
 }

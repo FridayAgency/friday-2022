@@ -91,7 +91,14 @@ const initConfig = async () => {
       deviceSizes: [570, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     },
     async redirects() {
-      return redirectsSettings;
+      return [
+        ...redirectsSettings,
+        {
+          source: '/wp-admin',
+          destination: `${process.env.NEXT_PUBLIC_WORDPRESS_URL}/wp-admin/`,
+          permanent: true,
+        },
+      ];
     },
   };
 };

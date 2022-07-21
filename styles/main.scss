@@ -1,57 +1,9 @@
-@import "./generic/functions";
-@import "./generic/mixins";
-@import "./generic/reset";
-@import "./generic/variables";
-@import "./generic/fonts";
-@import "./generic/base";
-@import "./generic/slider";
-@import "./generic/helpers";
-
-.flex {
-	height: 400px;
-	display: flex;
-
-	.flex-1,
-	.flex-2,
-	.flex-3 {
-		height: 100%;
-		flex: 1;
-		overflow: visible;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		flex: 2;
-		position: relative;
-		transition: flex 0.3s ease-in;
-		&:hover {
-			flex: 3;
-		}
-	}
-	.flex-1 {
-		background-color: yellow;
-	}
-	.flex-2 {
-		background-color: blue;
-	}
-	.flex-3 {
-		background-color: green;
-	}
-}
-
-@keyframes onAutoFillStart {
-}
-
-@keyframes onAutoFillCancel {
-}
-
-input:-webkit-autofill {
-	animation-name: onAutoFillStart;
-
-	transition: background-color 0.2s ease-in-out 0s;
-	-webkit-box-shadow: 0 0 0 1000px #f0f0f0 inset !important;
-	box-shadow: 0 0 0 1000px #f0f0f0 inset;
-}
-
-input:not(:-webkit-autofill) {
-	animation-name: onAutoFillCancel;
-}
+@import './generic/functions';
+@import './generic/mixins';
+@import './generic/reset';
+@import './generic/variables';
+@import './generic/fonts';
+@import './generic/base';
+@import './generic/slider';
+@import './generic/helpers';
+@import './generic/forms';

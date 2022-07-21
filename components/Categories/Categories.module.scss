@@ -7,6 +7,10 @@
     font-size: 20px;
     @extend .proxima-bold;
     position: relative;
+    padding: 0 0 8px 20px;
+    @include breakpoint-up(mobile) {
+      padding: 0;
+    }
     span {
       position: relative;
       margin-left: 4px;
