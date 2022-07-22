@@ -7,3 +7,29 @@
 @import './generic/slider';
 @import './generic/helpers';
 @import './generic/forms';
+
+.wp-caption {
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+
+  @include breakpoint-up(mobile) {
+    max-width: 100%;
+  }
+}
+
+.wp-video {
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  @include breakpoint-up(mobile) {
+    max-width: 100%;
+  }
+  video {
+    height: 200px;
+
+    @include breakpoint-up(mobile) {
+      height: auto;
+    }
+  }
+}
