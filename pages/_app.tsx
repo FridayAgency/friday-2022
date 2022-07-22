@@ -21,16 +21,16 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const router = useRouter();
 
-  useEffect(() => {
-    router.events.on('routeChangeComplete', pageview);
-    return () => {
-      router.events.off('routeChangeComplete', pageview);
-    };
-  }, [router.events]);
+  // useEffect(() => {
+  //   router.events.on('routeChangeComplete', pageview);
+  //   return () => {
+  //     router.events.off('routeChangeComplete', pageview);
+  //   };
+  // }, [router.events]);
 
   return (
     <>
-      <Script
+      {/* <Script
         id="gtag-base"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -51,14 +51,15 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         })(window, document, 'script', 'dataLayer', '${GTM_ID}');
           `,
         }}
-      />
+        defer
+      /> */}
       <WpProvider value={state}>
-        <Script
+        {/* <Script
           id="cookieyes"
           type="text/javascript"
           strategy="afterInteractive"
           src="https://cdn-cookieyes.com/client_data/a0d143f969f9c51a1b783990/script.js"
-        ></Script>
+        ></Script> */}
         <Component {...passThroughProps} key={router.asPath} />
       </WpProvider>
     </>
