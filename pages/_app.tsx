@@ -56,6 +56,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Script
           id="cookieyes"
           type="text/javascript"
+          strategy="afterInteractive"
           src="https://cdn-cookieyes.com/client_data/a0d143f969f9c51a1b783990/script.js"
         ></Script>
         <Component {...passThroughProps} key={router.asPath} />

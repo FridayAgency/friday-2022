@@ -11,8 +11,7 @@
     "analyze": "ANALYZE=true next build",
     "codegen:schema": "npx apollo client:download-schema --endpoint=http://localhost:10008/graphql",
     "gen": "graphql-codegen --config codegen.yml",
-    "generate": "graphql-codegen --config codegen.yml",
-    "postbuild": "next-sitemap"
+    "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@apollo/client": "^3.6.8",

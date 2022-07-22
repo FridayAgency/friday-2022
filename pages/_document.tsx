@@ -19,6 +19,8 @@ class MyDocument extends Document {
             as="font"
             crossOrigin="anonymous"
           />
+          <link rel="preconnect" as="script" href="https://active.cookieyes.com"></link>
+          <link rel="preconnect" as="script" href="https://www.googletagmanager.com"></link>
         </Head>
         <body>
           <noscript>

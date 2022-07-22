@@ -100,6 +100,16 @@ const initConfig = async () => {
         },
       ];
     },
+    rewrites: async () => {
+      return {
+        afterFiles: [
+          {
+            source: '/3d',
+            destination: '/public/3d/index.html',
+          },
+        ],
+      };
+    },
   };
 };
 
