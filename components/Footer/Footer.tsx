@@ -10,13 +10,13 @@ import styles from './Footer.module.scss';
 const Footer: React.FC = () => {
   const { footerData } = useWpContext();
 
-  const {
-    acfOptionsCompanyDetails: companyDetails,
-    acfOptionsSocialMediaUrls: socialMediaUrls,
-  } = footerData;
+  const { acfOptionsCompanyDetails: companyDetails, acfOptionsSocialMediaUrls: socialMediaUrls } =
+    footerData;
 
-  const stripedNumber: string =
-    companyDetails?.footerDetails?.footerPhoneNumber.replace(/\s/g, '-');
+  const stripedNumber: string = companyDetails?.footerDetails?.footerPhoneNumber.replace(
+    /\s/g,
+    '-'
+  );
 
   return (
     <footer className={styles.footer}>
@@ -69,20 +69,13 @@ const Footer: React.FC = () => {
           </li>
         </ul>
 
-        <Editor
-          className={styles.address}
-          copy={companyDetails?.footerDetails?.footerTitle}
-        />
+        <Editor className={styles.address} copy={companyDetails?.footerDetails?.footerTitle} />
 
         <div className={styles.contact}>
-          <a
-            href={`mailto:${companyDetails?.footerDetails?.footerEmailAddress}`}
-          >
+          <a href={`mailto:${companyDetails?.footerDetails?.footerEmailAddress}`}>
             {companyDetails?.footerDetails?.footerEmailAddress}
           </a>
-          <a href={`tel:${stripedNumber}`}>
-            {companyDetails?.footerDetails?.footerPhoneNumber}
-          </a>
+          <a href={`tel:${stripedNumber}`}>{companyDetails?.footerDetails?.footerPhoneNumber}</a>
         </div>
 
         <div className={styles.google}>
@@ -102,13 +95,13 @@ const Footer: React.FC = () => {
           </li>
           <li>
             <span>
-              <Link href={'/privacy-cookies/'}>
+              <Link href={'/privacy-cookies/'} prefetch={false}>
                 <a>Privacy Policy</a>
               </Link>
             </span>
             |
             <span>
-              <Link href={'/cookie-policy/'}>
+              <Link href={'/cookie-policy/'} prefetch={false}>
                 <a>Cookie Policy</a>
               </Link>
             </span>

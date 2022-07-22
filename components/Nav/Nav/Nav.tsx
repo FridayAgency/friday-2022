@@ -59,14 +59,10 @@ const Nav: React.FC = () => {
   const handleClick = () => setShowMobileMenu(!showMobileMenu);
 
   return (
-    <div
-      className={`${styles.wrapper} ${styles[navStyle]} ${
-        scrolled ? styles.shadow : ''
-      }`}
-    >
+    <div className={`${styles.wrapper} ${styles[navStyle]} ${scrolled ? styles.shadow : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">
+          <Link href="/" prefetch={false}>
             <a>
               {transparentLogo ? (
                 <div className={styles['logo-image']}>
@@ -97,9 +93,7 @@ const Nav: React.FC = () => {
 
           <Menu
             menu={mainMenu}
-            className={`${styles['menu-mobile__sticky']} ${
-              scrolled ? styles['show'] : ''
-            }`}
+            className={`${styles['menu-mobile__sticky']} ${scrolled ? styles['show'] : ''}`}
             showLogo
           />
         </nav>
@@ -109,9 +103,7 @@ const Nav: React.FC = () => {
           } ${scrolled ? styles.fixed : null} ${scrolled ? styles.dark : null}`}
           aria-haspopup="true"
           aria-expanded={showMobileMenu}
-          aria-label={`${
-            showMobileMenu ? 'Close Navigation' : 'Open Navigation'
-          }`}
+          aria-label={`${showMobileMenu ? 'Close Navigation' : 'Open Navigation'}`}
           onClick={handleClick}
         >
           <span></span>

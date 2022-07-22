@@ -215,7 +215,7 @@ export const AnimatedHeader: React.FC = () => {
             We unite
           </span>{' '}
           <span ref={marketingRef} className={styles.bold}>
-            <Link href="/expertise/digital-marketing/">
+            <Link href="/expertise/digital-marketing/" prefetch={false}>
               <a>Digital Marketing</a>
             </Link>
           </span>{' '}
@@ -223,7 +223,7 @@ export const AnimatedHeader: React.FC = () => {
             with the power of
           </span>{' '}
           <span ref={experienceRef} className={styles.bold}>
-            <Link href="/expertise/user-experience/">
+            <Link href="/expertise/user-experience/" prefetch={false}>
               <a>User Experience</a>
             </Link>
           </span>{' '}

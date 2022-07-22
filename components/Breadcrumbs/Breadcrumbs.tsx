@@ -51,7 +51,7 @@ const Breadcrumbs: React.FC = () => {
               if (index < breadcrumbs.length - 1) {
                 return (
                   <li className={styles.breadcrumb} key={crumb.breadcrumb}>
-                    <Link href={crumb?.href}>
+                    <Link href={crumb?.href} prefetch={false}>
                       <a>
                         {crumb?.breadcrumb.charAt(0).toUpperCase() + crumb?.breadcrumb.slice(1)}
                       </a>

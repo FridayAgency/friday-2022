@@ -104,7 +104,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, priority, index }) => {
           </span>
         </div>
         <h2 className={styles.title}>
-          <Link href={postLink}>
+          <Link href={postLink} prefetch={false}>
             <a>{title}</a>
           </Link>
         </h2>

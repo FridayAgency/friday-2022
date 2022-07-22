@@ -54,7 +54,6 @@ const initConfig = async () => {
   }));
 
   return {
-    productionBrowserSourceMaps: true,
     reactStrictMode: true,
     trailingSlash: true,
     sassOptions: {

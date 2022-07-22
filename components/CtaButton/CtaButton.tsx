@@ -47,14 +47,8 @@ const CtaButton: React.FC<CtaButtonProps> = ({
   }
 
   return (
-    <Link href={strippedUrl}>
-      <a
-        className={cx(
-          styles.button,
-          { [styles[colour]]: colour },
-          customClass
-        )}
-      >
+    <Link href={strippedUrl} prefetch={false}>
+      <a className={cx(styles.button, { [styles[colour]]: colour }, customClass)}>
         <span>{title}</span>
         {screenReaderText && <span className="visuallyhidden">{screenReaderText}</span>}
       </a>

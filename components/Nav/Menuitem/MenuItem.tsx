@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 /**
  * Menu Item Component
@@ -11,19 +11,19 @@ import Link from "next/link";
  */
 
 interface MenuItemProps {
-	url: string;
-	label: string;
-	className?: string;
+  url: string;
+  label: string;
+  className?: string;
 }
 
 const MenuItem = ({ url, label, className }: MenuItemProps): JSX.Element => {
-	return (
-		<li className={className}>
-			<Link href={url}>
-				<a className={className}>{label}</a>
-			</Link>
-		</li>
-	);
+  return (
+    <li className={className}>
+      <Link href={url} prefetch={false}>
+        <a className={className}>{label}</a>
+      </Link>
+    </li>
+  );
 };
 
 export default MenuItem;
