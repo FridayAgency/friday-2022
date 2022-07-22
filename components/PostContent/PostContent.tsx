@@ -49,7 +49,7 @@ const PostContent = ({
       query: { categorySlug: category?.slug, currentCategory: category?.name },
     });
   };
-
+  console.log(content);
   return (
     <article className={styles.article}>
       <Section customClass={styles.section}>

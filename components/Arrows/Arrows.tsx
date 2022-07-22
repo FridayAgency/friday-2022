@@ -44,7 +44,7 @@ export const LeftArrow: React.FC<ArrowProps> = ({ handleClick, red = false, blac
         className={cx(
           styles.arrow,
           styles.left,
-          { [styles['arrow-left']]: red },
+          { [styles['arrow-red']]: red },
           { [styles['arrow-black']]: black }
         )}
       >
