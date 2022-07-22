@@ -2,12 +2,11 @@ import '../styles/main.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRouter } from 'next/router';
-import Script from 'next/script';
+// import Script from 'next/script';
 import type { AppProps } from 'next/app';
 
 import WpProvider, { WpState } from '../components/context/wordpressContext';
-import { GTM_ID, pageview } from '../lib/gtm';
-import { useEffect } from 'react';
+// import { GTM_ID, pageview } from '../lib/gtm';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   // Extract the menus and recent posts so we can add  them to the wp context

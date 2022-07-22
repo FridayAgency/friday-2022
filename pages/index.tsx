@@ -7,7 +7,6 @@ import {
   PostTypeStaticProps,
 } from '../lib/postTypes/getPostTypeStaticProps';
 
-// import PagePanels from "../components/PagePanels";
 import PageHead from '../components/PageHead';
 import Layout from '../components/Layout';
 
@@ -15,7 +14,7 @@ import type { Page, Post } from '../types/graphql';
 import PageHeader from '../components/PageHeader';
 import Posts from '../components/Posts';
 import dynamic from 'next/dynamic';
-import { getAllPostTypesUris } from '../lib/postTypes/getAllPostTypeUris';
+
 const PagePanels = dynamic(() => import('../components/PagePanels'));
 
 interface HomeProps {
@@ -31,11 +30,6 @@ const Home = ({ content: page, posts, slug }: HomeProps): JSX.Element => {
 
   useEffect(() => {
     setMounted(true);
-    const getUris = async () => {
-      const posts = await getAllPostTypesUris('post');
-      console.log(posts);
-    };
-    getUris();
   }, []);
   return (
     <Layout>

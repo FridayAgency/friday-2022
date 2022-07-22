@@ -18,13 +18,6 @@ class MyDocument extends Document {
           <link rel="preconnect" as="script" href="https://www.googletagmanager.com"></link>
           <link rel="preload" href="https://use.typekit.net/zds1mpj.css" />
 
-          <link
-            rel="preload"
-            href="/fonts/merriweather/merriweather-v19-latin-regular.woff2"
-            as="font"
-            crossOrigin="anonymous"
-          />
-
           <link rel="stylesheet" href="https://use.typekit.net/zds1mpj.css" />
         </Head>
         <body>
