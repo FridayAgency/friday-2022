@@ -2,11 +2,12 @@ import '../styles/main.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRouter } from 'next/router';
-// import Script from 'next/script';
+import { useEffect } from 'react';
+import Script from 'next/script';
 import type { AppProps } from 'next/app';
 
 import WpProvider, { WpState } from '../components/context/wordpressContext';
-// import { GTM_ID, pageview } from '../lib/gtm';
+import { GTM_ID, pageview } from '../lib/gtm';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   // Extract the menus and recent posts so we can add  them to the wp context
@@ -20,16 +21,16 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const router = useRouter();
 
-  // useEffect(() => {
-  //   router.events.on('routeChangeComplete', pageview);
-  //   return () => {
-  //     router.events.off('routeChangeComplete', pageview);
-  //   };
-  // }, [router.events]);
+  useEffect(() => {
+    router.events.on('routeChangeComplete', pageview);
+    return () => {
+      router.events.off('routeChangeComplete', pageview);
+    };
+  }, [router.events]);
 
   return (
     <>
-      {/* <Script
+      <Script
         id="gtag-base"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -51,14 +52,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           `,
         }}
         defer
-      /> */}
+      />
       <WpProvider value={state}>
-        {/* <Script
+        <Script
           id="cookieyes"
           type="text/javascript"
           strategy="afterInteractive"
           src="https://cdn-cookieyes.com/client_data/a0d143f969f9c51a1b783990/script.js"
-        ></Script> */}
+        ></Script>
         <Component {...passThroughProps} key={router.asPath} />
       </WpProvider>
     </>
