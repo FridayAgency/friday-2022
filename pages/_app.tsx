@@ -57,8 +57,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Script
           id="cookieyes"
           type="text/javascript"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://cdn-cookieyes.com/client_data/a0d143f969f9c51a1b783990/script.js"
+          defer
         ></Script>
         <Component {...passThroughProps} key={router.asPath} />
       </WpProvider>
